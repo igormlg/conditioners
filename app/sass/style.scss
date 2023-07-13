@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+@import 'normalize8.0.1';
+@import 'fonts';
+@import 'var';
+@import 'base';
+@import 'mobile/header';
+
+@media (min-width: 768px) {
+    @import 'desktop/desktop-main';
+}
