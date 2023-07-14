@@ -2,8 +2,9 @@ body {
     margin: 0;
     padding: 28px 16px 30px;
     background-color: $main-blue;
-    font-weight: normal;
-    font-family: "FuturaPT", sans-serif;;
+    font-weight: 400;
+    font-family: "FuturaPT", sans-serif;
+    color: $text-color2;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -11,6 +11,8 @@ import clean from 'gulp-clean';
 import imagemin from 'gulp-imagemin';
 import newer from 'gulp-newer';
 import include from 'gulp-include';
+import cleanCSS from 'gulp-clean-css';
+import fileinclude from 'gulp-file-include';
 
 const sass = gulpSass(dartSass);
 
@@ -19,6 +21,7 @@ export function pages() {
         .pipe(include({
             includePaths: 'app/components'
         }))
+        // .pipe(fileinclude({ prefix: '@@' }))
         .pipe(gulp.dest('app'))
         .pipe(browserSync.stream())
 }
@@ -48,8 +51,9 @@ export function styles() {
     return gulp.src([
         'app/sass/**/*.scss'
     ])
-        .pipe(autoprefixer({ovverrideBrowserslist: ['last 10 version']}))
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(autoprefixer({ovverrideBrowserslist: ['last 10 version']}))
+        .pipe(cleanCSS())
         .pipe(concat('style.min.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.stream());
