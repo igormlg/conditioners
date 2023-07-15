@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -30,7 +30,22 @@
     </header>
 
 <main>
-    main
+    <section class="intro-block intro-block--pos">
+        <div class="intro-block__inner-container">
+            <picture>
+                <source media="(min-width: 768px)" srcset="../images/group1x4.png">
+                <img class="intro-block__main-img" src="../images/group1x2.png" alt="group">
+            </picture>
+            <h1 class="intro-block__header">Clean your <span>Air Conditioner</span> and breathe free</h1>
+            <p class="intro-block__desc">It’s a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
+            <form action="" name="conditioner-form" class="conditioner-form">
+                <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip">
+                <input class="conditioner-form__input" type="text" name="install" placeholder="Where your conditioner is installed">
+                <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
+            </form>
+            <div class="intro-block__btn intro-block__btn--v2">Get it</div>
+        </div>
+    </section>
 </main>
 <div class="header-title-menu">
     <img class="header-title-menu__img" src="images/logo.svg" alt="">
@@ -49,8 +64,32 @@
         </span>
     </div>
 </div>
+<div class="header-title-menu">
+    <img class="header-title-menu__img" src="images/logo.svg" alt="">
+    <span class="header-title-menu__text" >FIXCONDITIONER</span>
+
+    <ul class="header-title-menu__list header-title-menu__list--pos">
+        <li class="header-title-menu__item">Why do you need to clean</li>
+        <li class="header-title-menu__item">Our team</li>
+        <li class="header-title-menu__item">Contact</li>
+    </ul>
+
+    <div class="header-call header-call-menu header-call-menu--pos">
+        <img class="header-call__img header-call-menu__img" src="../images/phone.svg" alt="phone">
+        <span class="header-call__text header-call-menu__text">
+            Call me back
+        </span>
+    </div>
+</div>
 <div class="modal-overlay"></div>
+
+
+<div class="callback-menu">
+    cM
+</div>
     <footer>foot</footer>
    <script src="js/main.min.js"></script> 
 </body>
 </html>
+
+

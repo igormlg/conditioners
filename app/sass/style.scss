@@ -4,10 +4,13 @@
 @import 'fonts';
 @import 'var';
 @import 'base';
+@import 'animations';
 @import 'mobile/header';
 @import 'mobile/menu';
+@import 'mobile/callback-menu';
 @import 'mobile/overlay';
+@import 'mobile/intro-block';
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     @import 'desktop/desktop-main';
 }

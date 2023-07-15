@@ -6,9 +6,14 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: $main-blue;
 }
 
 .modal-overlay--show {
     display: block;
+    background-color: $main-blue;
+}
+
+.modal-overlay--callback-show {
+    display: block;
+    background-color: #fff;
 }
