@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -29,22 +29,54 @@
         </div>
     </header>
 
-<main>
+<main class="cond-main">
     <section class="intro-block intro-block--pos">
         <div class="intro-block__inner-container">
-            <h1 class="intro-block__header">Clean your Air Conditioner and breathe free</h1>
+            <picture>
+                <source media="(min-width: 768px)" srcset="../images/group1x4.png">
+                <img class="intro-block__main-img" src="../images/group1x2.png" alt="group">
+            </picture>
+            <h1 class="intro-block__header">Clean your <span>Air Conditioner</span> and breathe free</h1>
             <p class="intro-block__desc">It’s a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
             <form action="" name="conditioner-form" class="conditioner-form">
-                <input class="conditioner-form__input" type="text" name="zip" placeholder="Enter your zip">
+                <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip">
                 <input class="conditioner-form__input" type="text" name="install" placeholder="Where your conditioner is installed">
+                <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
             </form>
             <div class="intro-block__btn intro-block__btn--v2">Get it</div>
-            <img class="intro-block__stars" src="../images/stars.svg" alt="stars">
-            <p class="intro-block__stars-text">From +78,480 homeowners</p>
-            <picture>
-                <source media="(min-width: 768px)" srcset="../images/group2x4.png">
-                <img src="../images/group2x2.png" alt="group">
-            </picture>
+        </div>
+    </section>
+    <section class="our-work">
+        <div class="our-work__inner-container">
+            <h2 class="our-work__title">Our work</h2>
+            <p class="our-work__desc">Compare the difference between dirty and clean conditioner</p>
+            <div class="slider-block">
+                <div class="slider">
+                    <div class="slider-line">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="../images/cond-badx4-01.jpg">
+                            <img class="slider-img" src="../images/cond-badx2-01.jpg" alt="conditioner image">
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="../images/cond-badx4-02.jpg">
+                            <img class="slider-img" src="../images/cond-badx2-02.jpg" alt="conditioner image">
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="../images/cond-badx4-03.jpg">
+                            <img class="slider-img" src="../images/cond-badx2-03.jpg" alt="conditioner image">
+                        </picture>
+                        <!-- <img class="slider-img" src="../images/cond-badx2-01.jpg" alt="conditioner image">
+                        <img class="slider-img" src="../images/cond-badx2-02.jpg" alt="conditioner image">
+                        <img class="slider-img" src="../images/cond-badx2-03.jpg" alt="conditioner image"> -->
+                    </div>
+                    <button class="slider-btn slider-prev"></button>
+                    <button class="slider-btn slider-next"></button>
+                    <div class="slider-window-title">Before</div>
+                </div>
+                <h3 class="slider-block__heading">Headline</h3>
+                <p class="slider-block__desc">Description</p>
+                <p class="slider-block__phrase">Your nose says thanks to you</p>
+            </div>
         </div>
     </section>
 </main>
@@ -65,8 +97,89 @@
         </span>
     </div>
 </div>
+<div class="header-title-menu">
+    <img class="header-title-menu__img" src="images/logo.svg" alt="">
+    <span class="header-title-menu__text" >FIXCONDITIONER</span>
+
+    <ul class="header-title-menu__list header-title-menu__list--pos">
+        <li class="header-title-menu__item">Why do you need to clean</li>
+        <li class="header-title-menu__item">Our team</li>
+        <li class="header-title-menu__item">Contact</li>
+    </ul>
+
+    <div class="header-call header-call-menu header-call-menu--pos">
+        <img class="header-call__img header-call-menu__img" src="../images/phone.svg" alt="phone">
+        <span class="header-call__text header-call-menu__text">
+            Call me back
+        </span>
+    </div>
+</div>
 <div class="modal-overlay"></div>
+
+
+<div class="callback-menu">
+    <div class="callback-menu__inner-container">
+        <h2 class="callback-menu__title">Header</h2>
+        <form class="callback-form" action="" name="callback-form">
+            <h2 class="callback-form__heading-h2">My name is</h2>
+            <div class="field-wrapper">
+                <label class="callback-form__label" for="first-name">First name</label>
+                <input class="callback-form__text-input" id="first-name" type="text" placeholder="Adrian">
+            </div>
+            <div class="field-wrapper">
+                <label class="callback-form__label" for="last-name">Last name</label>
+                <input class="callback-form__text-input" id="last-name" type="text" placeholder="Markov">
+            </div>
+
+            <h2 class="callback-form__heading-h2">I live in</h2>
+            <div class="field-wrapper">
+                <label class="callback-form__label" for="state-select">State</label>
+                <select class="callback-form__text-input" id="state-select" type="select">
+                    <option value="Location" disabled selected hidden>Location</option>
+                    <option value="state1">State1</option>
+                    <option value="state2">State2</option>
+                    <option value="state3">State3</option>
+                </select>
+            </div>
+
+            <h2 class="callback-form__heading-h2">When we could get contact you</h2>
+            <ul class="callback-form__radio-list">
+                <li class="callback-form__radio-el">
+                    <input
+                        class="visually-hidden filter-input filter-input-radio"
+                        type="radio"
+                        name="day-part-group"
+                        id="filter-morning"
+                    />
+                  <label for="filter-morning">Morning</label>
+                </li>
+                <li class="callback-form__radio-el">
+                    <input
+                        class="visually-hidden filter-input filter-input-radio"
+                        type="radio"
+                        name="day-part-group"
+                        id="filter-day"
+                    />
+                  <label for="filter-day">Day</label>
+                </li>
+                <li class="callback-form__radio-el">
+                    <input
+                        class="visually-hidden filter-input filter-input-radio"
+                        type="radio"
+                        name="day-part-group"
+                        id="filter-evening"
+                    />
+                  <label for="filter-evening">Evening</label>
+                </li>
+            </ul>
+            <input class="callback-form__submit" type="submit" value="Send">
+
+        </form>
+    </div>
+</div>
     <footer>foot</footer>
    <script src="js/main.min.js"></script> 
 </body>
 </html>
+
+

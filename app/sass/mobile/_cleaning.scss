@@ -1,0 +1,61 @@
+.cleaning {
+    margin-bottom: 50px;
+}
+.cleaning__block {
+    margin-bottom: 30px;
+}
+
+.cleaning__block--last {
+    margin-bottom: 33px;
+}
+
+.cleaning__icon {
+    width: 57px;
+    height: 57px;
+    margin-bottom: 15px;
+    background-color: $second-blue;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cleaning__icon--electricity {
+    background-image: url(../../images/electricity.svg);
+}
+
+.cleaning__icon--bacteria {
+    background-image: url(../../images/bacteria.svg);
+}
+
+.cleaning__icon--fan {
+    background-image: url(../../images/fan-black.svg);
+}
+
+.cleaning__icon--termometer {
+    background-image: url(../../images/termometer.svg);
+}
+
+.cleaning__heading {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    color: $text-color1;
+}
+
+.cleaning__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cleaning__star-text {
+    color: #898989;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cleaning__star-row--top {
+    margin-bottom: 5px;
+}

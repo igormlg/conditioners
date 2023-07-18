@@ -95,6 +95,8 @@ export function building() {
         'app/css/style.min.css',
         'app/js/main.min.js',
         'app/**/*.html',
+        '!app/components/*',
+        '!app/pages/*',
         'app/fonts/*.*',
         'app/**/*.php',
         'app/images/*.*',

@@ -22,7 +22,7 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const headerCall = document.querySelector('.header-call');
 const introBlockBtn = document.querySelector('.intro-block__btn');
 const callbackMenu = document.querySelector('.callback-menu');
-console.log(callbackMenu)
+
 headerBrg.addEventListener('click', function() {
 
     if (callbackMenu.classList.contains('callback-menu--show')) {
@@ -40,17 +40,13 @@ headerBrg.addEventListener('click', function() {
 
 window.onkeydown = function(event) {
     if (event.keyCode == 27 && headerMenu.classList.contains('header-title-menu--active')) {
-        console.log('HERE 0')
         event.preventDefault();
         headerBrg.classList.remove('header-brg--active');
         headerMenu.classList.remove('header-title-menu--active');
         modalOverlay.classList.remove('modal-overlay--show');
-        // headerBrg.removeEventListener('click');
     } 
     if (event.keyCode == 27 && callbackMenu.classList.contains('callback-menu--show')) {
-        console.log('HERE')
         event.preventDefault();
-        console.log(callbackMenu, headerBrg, modalOverlay, headerCall)
         callbackMenu.classList.remove('callback-menu--show');
         headerBrg.classList.remove('header-brg--active');
         modalOverlay.classList.remove('modal-overlay--callback-show');
@@ -60,11 +56,62 @@ window.onkeydown = function(event) {
 
 for (let el of [headerCall, introBlockBtn]) {
     el.addEventListener('click', function() {
-        console.log('cl')
         callbackMenu.classList.add('callback-menu--show')
         headerBrg.classList.add('header-brg--active');
         modalOverlay.classList.add('modal-overlay--callback-show');
         headerCall.classList.add('header-call--overlayed');
     });
 }
+
+// slider
+
+
+function sliderStart(slider) {
+    console.log
+    let countS = 0;
+    let widthS;
+    const imagesS = slider.querySelectorAll('.slider img');
+    const sliderLine = slider.querySelector('.slider-line');
+
+    function initSlider() {
+        widthS = slider.querySelector('.slider').offsetWidth;
+        sliderLine.style.width = widthS * imagesS.length + 'px';
+
+        imagesS.forEach(item => {
+            item.style.width = widthS + 'px';
+            item.style.height = 'auto';
+        });
+        rollSlider();
+    }
+    
+    function rollSlider() {
+        sliderLine.style.transform = 'translate(-' + countS * widthS + 'px)';
+    }
+    
+    window.addEventListener('resize', initSlider)
+    initSlider();
+    
+    slider.querySelector('.slider-next').addEventListener('click', function() {
+        countS++;
+        if (countS >= imagesS.length) {
+            countS = imagesS.length - 1;
+            return;
+        }
+        rollSlider();
+    });
+    
+    slider.querySelector('.slider-prev').addEventListener('click', function() {
+        countS--;
+        if (countS < 0) {
+            countS = 0;
+            return;
+        }
+        rollSlider();
+    });
+}
+
+for (let el of document.querySelectorAll('.slider-block')) {
+    sliderStart(el);
+}
+
 

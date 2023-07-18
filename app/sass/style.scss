@@ -5,11 +5,15 @@
 @import 'var';
 @import 'base';
 @import 'animations';
+@import 'mobile/common';
+@import 'mobile/main';
 @import 'mobile/header';
 @import 'mobile/menu';
 @import 'mobile/callback-menu';
 @import 'mobile/overlay';
 @import 'mobile/intro-block';
+@import 'mobile/our-work';
+@import 'mobile/cleaning';
 
 @media (min-width: 640px) {
     @import 'desktop/desktop-main';
