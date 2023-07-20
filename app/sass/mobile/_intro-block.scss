@@ -126,13 +126,13 @@
 }
 
 .conditioner-form__input--text {
-    background-image: url("/images/zip.svg");
+    background-image: url("./images/zip.svg");
     background-position: 5px center;
     background-repeat: no-repeat;
 }
 
 .conditioner-form__input--textarea {
-    background-image: url("/images/fan.svg");
+    background-image: url("./images/fan.svg");
     background-position: 5px center;
     background-repeat: no-repeat;
 }
@@ -161,13 +161,13 @@
     line-height: normal;
     
     &:first-child {
-        background-image: url("/images/zip.svg");
+        background-image: url("./images/zip.svg");
         background-position: 5px center;
         background-repeat: no-repeat;
     }
 
     &:last-child {
-        background-image: url("/images/fan.svg");
+        background-image: url("./images/fan.svg");
         background-position: 5px center;
         background-repeat: no-repeat;
     }

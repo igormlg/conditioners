@@ -36,14 +36,14 @@ export function fonts() {
 }
 
 export function images() {
-    return gulp.src(['app/images/src/**/*', '!app/images/src/*.svg'])
-        .pipe(newer('app/images'))
+    return gulp.src(['app./images/src/**/*', '!app./images/src/*.svg'])
+        .pipe(newer('app./images'))
         .pipe(imagemin())
 
-        .pipe(gulp.src('app/images/src/*.svg'))
-        .pipe(newer('app/images'))
+        .pipe(gulp.src('app./images/src/*.svg'))
+        .pipe(newer('app./images'))
 
-        .pipe(gulp.dest('app/images'))
+        .pipe(gulp.dest('app./images'))
 }
 
 export function styles() {
@@ -79,7 +79,7 @@ export function watching() {
     });
     gulp.watch(['app/sass/**/*.scss'], styles);
     gulp.watch(['app/js/main.js'], scripts);
-    gulp.watch(['app/images/src'], images);
+    gulp.watch(['app./images/src'], images);
     gulp.watch(['app/components/*', 'app/pages/*'], pages);
     gulp.watch(['app/**/*.html']).on('change', browserSync.reload);
     // gulp.watch(['app/**/*.php']).on('change', browserSync.reload);
@@ -99,7 +99,7 @@ export function building() {
         '!app/pages/*',
         'app/fonts/*.*',
         'app/**/*.php',
-        'app/images/**/*',
+        'app./images/**/*',
         'app/php-scripts/**/*.*'
     ], {
         base: 'app'
