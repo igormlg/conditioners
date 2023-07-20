@@ -2,7 +2,7 @@
     <div class="callback-menu__inner-container">
         <h2 class="callback-menu__title">Header</h2>
         <form class="callback-form" action="" name="callback-form">
-            <h2 class="callback-form__heading-h2">My name is</h2>
+            <h3 class="callback-form__heading-h2">My name is</h3>
             <div class="field-wrapper">
                 <label class="callback-form__label" for="first-name">First name</label>
                 <input class="callback-form__text-input" id="first-name" type="text" placeholder="Adrian">
@@ -12,18 +12,24 @@
                 <input class="callback-form__text-input" id="last-name" type="text" placeholder="Markov">
             </div>
 
-            <h2 class="callback-form__heading-h2">I live in</h2>
+            <h3 class="callback-form__heading-h2">I live in</h3>
             <div class="field-wrapper">
                 <label class="callback-form__label" for="state-select">State</label>
                 <select class="callback-form__text-input" id="state-select" type="select">
                     <option value="Location" disabled selected hidden>Location</option>
-                    <option value="state1">State1</option>
-                    <option value="state2">State2</option>
-                    <option value="state3">State3</option>
+                    <option value="state1" class="select-option">State1</option>
+                    <option value="state2" class="select-option">State2</option>
+                    <option value="state3" class="select-option">State3</option>
                 </select>
             </div>
 
-            <h2 class="callback-form__heading-h2">When we could get contact you</h2>
+            <h3 class="callback-form__heading-h2">Contact number</h3>
+            <div class="field-wrapper">
+                <label class="callback-form__label" for="callback-tel">Phone</label>
+                <input class="callback-form__text-input callback-tel" id="callback-tel" type="tel" placeholder="Number">
+            </div>
+
+            <h3 class="callback-form__heading-h2">When we could get contact you</h3>
             <ul class="callback-form__radio-list">
                 <li class="callback-form__radio-el">
                     <input
@@ -53,6 +59,7 @@
                   <label for="filter-evening">Evening</label>
                 </li>
             </ul>
+
             <input class="callback-form__submit" type="submit" value="Send">
 
         </form>

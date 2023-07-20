@@ -1,0 +1,54 @@
+.step-block {
+    margin-bottom: 50px;
+}
+
+.step-block__inner-container {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+.step-block__item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.step-block__item--last {
+    margin-bottom: 0;
+}
+
+.step-block__icon {
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: $second-blue;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.step-block__icon--card {
+    background-image: url(/images/card.svg);
+}
+
+.step-block__icon--calendar {
+    background-image: url(/images/calendar.svg);
+}
+
+.step-block__icon--wind {
+    background-image: url(/images/wind.svg);
+}
+
+.step-block__heading {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    color: $text-color1;
+}
+
+.step-block__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    color: $text-color1;
+}

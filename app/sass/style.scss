@@ -14,6 +14,13 @@
 @import 'mobile/intro-block';
 @import 'mobile/our-work';
 @import 'mobile/cleaning';
+@import 'mobile/join-block';
+@import 'mobile/step-block';
+@import 'mobile/call-block';
+@import 'mobile/reviews';
+@import 'mobile/faq-block';
+@import 'mobile/our_team';
+@import 'mobile/footer';
 
 @media (min-width: 640px) {
     @import 'desktop/desktop-main';

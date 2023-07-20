@@ -15,9 +15,15 @@
 .slider-line {
     display: flex;
     transition: all .5s;
+    font-size: 0;
+    line-height: 0;
+
+    picture {
+        // flex-shrink: 0;
+        // width: 100%;
+    }
     // img {
     //     flex-shrink: 0;
-    //     width: 100%;
     // }
 }
 

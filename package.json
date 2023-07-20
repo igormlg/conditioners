@@ -29,7 +29,9 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
+    "inputmask": "^5.0.8",
     "sass": "^1.63.6",
     "swiper": "^10.0.4"
-  }
+  },
+  "dependencies": {}
 }

@@ -12,7 +12,7 @@ import imagemin from 'gulp-imagemin';
 import newer from 'gulp-newer';
 import include from 'gulp-include';
 import cleanCSS from 'gulp-clean-css';
-import fileinclude from 'gulp-file-include';
+// import fileinclude from 'gulp-file-include';
 
 const sass = gulpSass(dartSass);
 
@@ -21,7 +21,6 @@ export function pages() {
         .pipe(include({
             includePaths: 'app/components'
         }))
-        // .pipe(fileinclude({ prefix: '@@' }))
         .pipe(gulp.dest('app'))
         .pipe(browserSync.stream())
 }
@@ -37,7 +36,7 @@ export function fonts() {
 }
 
 export function images() {
-    return gulp.src(['app/images/src/*.*', '!app/images/src/*.svg'])
+    return gulp.src(['app/images/src/**/*', '!app/images/src/*.svg'])
         .pipe(newer('app/images'))
         .pipe(imagemin())
 
@@ -61,6 +60,7 @@ export function styles() {
 
 export function scripts() {
     return gulp.src([
+        'node_modules/inputmask/dist/inputmask.min.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])
@@ -99,7 +99,7 @@ export function building() {
         '!app/pages/*',
         'app/fonts/*.*',
         'app/**/*.php',
-        'app/images/*.*',
+        'app/images/**/*',
         'app/php-scripts/**/*.*'
     ], {
         base: 'app'

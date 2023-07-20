@@ -1,0 +1,121 @@
+.footer {
+    padding: 30px 78px;
+    background-color: $second-blue;
+}
+
+.footer__inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    width: 82px;
+}
+
+.footer__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+    width: 204px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__link {
+    flex-shrink: 0;
+    width: 50%;
+    color: $text-color1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+
+    &:hover {
+        color: lighten($text-color1, 20%);
+        text-decoration: underline;
+        transition: color .2s;
+
+        @media (max-width: 640px) {
+            position: relative;
+            top: 1px;
+            transition: top .2s;
+        }
+    }
+
+    &:active, &:focus {
+        position: relative;
+        top: 1px;
+        transition: top .2s;
+    }
+}
+
+.footer__follow-text {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: $text-color1;
+}
+
+.footer__social-links {
+    display: flex;
+    column-gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__social-link {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        transition: box-shadow .2s;
+
+        @media (max-width: 640px) {
+            position: relative;
+            top: 1px;
+            transition: top .2s;
+        }
+    }
+
+    &:active, &:focus {
+        position: relative;
+        top: 1px;
+        transition: top .2s;
+    }
+}
+
+.footer__social-link--instagram {
+    background-image: url(/images/instagram.svg);
+}
+
+.footer__social-link--vk {
+    background-image: url(/images/vk.svg);
+}
+
+.footer__social-link--telegram {
+    background-image: url(/images/telegram.svg);
+}
+
+.footer__social-link--whatsapp {
+    background-image: url(/images/whatsapp.svg);
+}

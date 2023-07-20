@@ -1,0 +1,118 @@
+.call-block {
+    padding: 30px 7px;
+    margin-bottom: 50px;
+    background-color: $second-blue;
+    border-radius: 15px;
+}
+
+.call-block__inner-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-desc--call {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.call-block__text {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: normal;
+    color: #000;
+}
+
+.call-block-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-tel {
+    width: 100%;
+    padding: 16px 40px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+    outline: none;
+}
+
+.call-btn {
+    width: 100%;
+    padding: 16px 32px;
+    margin-bottom: 15px;
+    background-color: $main-ochre;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: normal;
+
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        transition: box-shadow .2s;
+
+        @media (max-width: 640px) {
+            position: relative;
+            top: 2px;
+            transition: top .2s;
+        }
+    }
+
+    &:active, &:focus {
+        position: relative;
+        top: 2px;
+        transition: top .2s;
+    }
+}
+
+.call-check {
+    display: flex;
+    justify-content: center;
+
+    label {
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+#call-check__input + label::before {
+    position: absolute;
+    left: -22px;
+    top: 0;
+    content: "";
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: $main-ochre;
+}
+
+#call-check__input:checked + label::before {
+    background-image: url(/images/check-ochre.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.call-check__label {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: $text-color1;
+}
+
+.call-check__download {
+    color: $text-color1;
+    text-decoration: underline;
+
+    &:hover {
+        color: #000;
+        transition: color .2s;
+    }
+}
