@@ -1,0 +1,38 @@
+.desktop-menu {
+    display: flex;
+    column-gap: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-brg {
+    display: none;
+}
+
+.desktop-menu__link {
+    color: $text-color1;
+
+    &:hover {
+        color: lighten($text-color1, 20%);
+    }
+
+    &:active, &:focus {
+        position: relative;
+        top: 2px;
+        transition: top .2s;
+    }
+}
+
+.fp1 {
+    flex-shrink: 0;
+}
+
+.main-header {
+    @media (min-width: 1280px) {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}

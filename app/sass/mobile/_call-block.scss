@@ -52,12 +52,13 @@
     font-weight: 400;
     cursor: pointer;
     line-height: normal;
+    color: #000;
 
     &:hover {
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
         transition: box-shadow .2s;
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 2px;
             transition: top .2s;
@@ -93,7 +94,7 @@
 }
 
 #call-check__input:checked + label::before {
-    background-image: url(./images/check-ochre.svg);
+    background-image: url(/images/check-ochre.svg);
     background-position: center;
     background-repeat: no-repeat;
     border: none;

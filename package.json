@@ -28,9 +28,13 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^3.0.0",
+    "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
+    "i": "^0.3.7",
     "inputmask": "^5.0.8",
+    "npm": "^9.8.1",
     "sass": "^1.63.6",
+    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^10.0.4"
   },
   "dependencies": {}

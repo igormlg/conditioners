@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="/css/style.min.css?v=90d86290666fb9de7f585d25c79c06fa">
 </head>
 <body>
     <header class="main-header">
         <div class="main-header__inner-container">
             <a href="/" class="header-title">
-                <img class="header-title__img" src="../images/logo.svg" alt="">
+                <img class="header-title__img" src="/images/logo.svg" alt="">
                 <span class="header-title__text" >FIXCONDITIONER</span>
+                <ul class="desktop-menu">
+                    <li class="desktop-menu__item">
+                        <a class="desktop-menu__link why-scroll" href="#">Why do you need to clean</a>
+                    </li>
+                    <li class="desktop-menu__item">
+                        <a class="desktop-menu__link" href="our-team.html">Our team</a>
+                    </li>
+                    <li class="desktop-menu__item">
+                        <a class="desktop-menu__link" href="#">Contact</a>
+                    </li>
+                </ul>
             </a>
             <div class="header-rb">
                 <div class="header-call cb-btn">
-                    <img class="header-call__img" src="./images/phone.svg" alt="phone">
+                    <img class="header-call__img" src="/images/phone.svg" alt="phone">
                     <span class="header-call__text">
                         Call me back
                     </span>
@@ -33,17 +44,19 @@
     <section class="intro-block intro-block--pos">
         <div class="intro-block__inner-container">
             <picture>
-                <source media="(min-width: 768px)" srcset="./images/group1x4.png">
-                <img class="intro-block__main-img" src="./images/group1x2.png" alt="group">
+                <source media="(min-width: 768px)" srcset="/images/group1x4.png">
+                <img class="intro-block__main-img" src="/images/group1x2.png" alt="group">
             </picture>
-            <h1 class="intro-block__header">Clean your <span>Air Conditioner</span> and breathe free</h1>
-            <p class="intro-block__desc">It’s a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
-            <form action="" name="conditioner-form" class="conditioner-form">
-                <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip">
-                <input class="conditioner-form__input" type="text" name="install" placeholder="Where your conditioner is installed">
-                <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
-            </form>
-            <div class="intro-block__btn cb-btn intro-block__btn--v2">Get it</div>
+            <div class="intro-block__right-content">
+                <h1 class="intro-block__header"><div class="fp1">Clean your Air Conditioner</div> <div class="fp2">and breathe free</div></h1>
+                <p class="intro-block__desc">It's a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
+                <form action="" name="conditioner-form" class="conditioner-form">
+                    <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip">
+                    <input class="conditioner-form__input" type="text" name="install" placeholder="Where your conditioner is installed">
+                    <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
+                </form>
+                <div class="intro-block__btn cb-btn intro-block__btn--v2">Get it</div>
+            </div>
         </div>
     </section>
     <section class="our-work">
@@ -54,20 +67,20 @@
                 <div class="slider">
                     <div class="slider-line">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="./images/cond-badx4-01.jpg">
-                            <img class="slider-img" src="./images/cond-badx2-01.jpg" alt="conditioner image">
+                            <source media="(min-width: 768px)" srcset="/images/cond-badx4-01.jpg">
+                            <img class="slider-img" src="/images/cond-badx2-01.jpg" alt="conditioner image">
                         </picture>
                         <picture>
-                            <source media="(min-width: 768px)" srcset="./images/cond-badx4-02.jpg">
-                            <img class="slider-img" src="./images/cond-badx2-02.jpg" alt="conditioner image">
+                            <source media="(min-width: 768px)" srcset="/images/cond-badx4-02.jpg">
+                            <img class="slider-img" src="/images/cond-badx2-02.jpg" alt="conditioner image">
                         </picture>
                         <picture>
-                            <source media="(min-width: 768px)" srcset="./images/cond-badx4-03.jpg">
-                            <img class="slider-img" src="./images/cond-badx2-03.jpg" alt="conditioner image">
+                            <source media="(min-width: 768px)" srcset="/images/cond-badx4-03.jpg">
+                            <img class="slider-img" src="/images/cond-badx2-03.jpg" alt="conditioner image">
                         </picture>
-                        <!-- <img class="slider-img" src="./images/cond-badx2-01.jpg" alt="conditioner image">
-                        <img class="slider-img" src="./images/cond-badx2-02.jpg" alt="conditioner image">
-                        <img class="slider-img" src="./images/cond-badx2-03.jpg" alt="conditioner image"> -->
+                        <!-- <img class="slider-img" src="/images/cond-badx2-01.jpg" alt="conditioner image">
+                        <img class="slider-img" src="/images/cond-badx2-02.jpg" alt="conditioner image">
+                        <img class="slider-img" src="/images/cond-badx2-03.jpg" alt="conditioner image"> -->
                     </div>
                     <button class="slider-btn slider-prev"></button>
                     <button class="slider-btn slider-next"></button>
@@ -82,16 +95,16 @@
                 <div class="slider">
                     <div class="slider-line">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="./images/cond-goodx4-01.jpg">
-                            <img class="slider-img" src="./images/cond-goodx2-01.jpg" alt="conditioner image">
+                            <source media="(min-width: 768px)" srcset="/images/cond-goodx4-01.jpg">
+                            <img class="slider-img" src="/images/cond-goodx2-01.jpg" alt="conditioner image">
                         </picture>
                         <picture>
-                            <source media="(min-width: 768px)" srcset="./images/cond-goodx4-02.jpg">
-                            <img class="slider-img" src="./images/cond-goodx2-02.jpg" alt="conditioner image">
+                            <source media="(min-width: 768px)" srcset="/images/cond-goodx4-02.jpg">
+                            <img class="slider-img" src="/images/cond-goodx2-02.jpg" alt="conditioner image">
                         </picture>
-                        <!-- <img class="slider-img" src="./images/cond-badx2-01.jpg" alt="conditioner image">
-                        <img class="slider-img" src="./images/cond-badx2-02.jpg" alt="conditioner image">
-                        <img class="slider-img" src="./images/cond-badx2-03.jpg" alt="conditioner image"> -->
+                        <!-- <img class="slider-img" src="/images/cond-badx2-01.jpg" alt="conditioner image">
+                        <img class="slider-img" src="/images/cond-badx2-02.jpg" alt="conditioner image">
+                        <img class="slider-img" src="/images/cond-badx2-03.jpg" alt="conditioner image"> -->
                     </div>
                     <button class="slider-btn slider-prev"></button>
                     <button class="slider-btn slider-next"></button>
@@ -184,7 +197,7 @@
                 <div class="slider slider--reviews">
                     <div class="slider-line">
                         <div class="reviews__item slider-img">
-                            <img class="reviews__stars" src="./images/stars-blue.svg" alt="avatar">
+                            <img class="reviews__stars" src="/images/stars-blue.svg" alt="avatar">
                             <p class="reviews__text">The conditioner crew at FixConditioner is wonderful! They were punctual, efficient and made my cleaning experience the best I have ever had. They had all jobs done within 2 hours. This is who you need to call if you need help with your conditioner, thank you guys!</p>
                             
                             <div class="reviews__person-block person-block">
@@ -197,7 +210,7 @@
                         </div>
     
                         <div class="reviews__item slider-img">
-                            <img class="reviews__stars" src="./images/stars-blue.svg" alt="avatar">
+                            <img class="reviews__stars" src="/images/stars-blue.svg" alt="avatar">
                             <p class="reviews__text">Alex and his crew performed an outstanding job cleaning our conditioners with great caution. They exhibited utmost professionalism, courtesy, and benevolence. The  work was completed faster than anticipated. We will absolutely endorse their services to anyone seeking for a clean conditioner in the house</p>
                             
                             <div class="reviews__person-block person-block">
@@ -210,7 +223,7 @@
                         </div>
     
                         <div class="reviews__item slider-img">
-                            <img class="reviews__stars" src="./images/stars-blue.svg" alt="avatar">
+                            <img class="reviews__stars" src="/images/stars-blue.svg" alt="avatar">
                             <p class="reviews__text">Extremely happy that I utilized this company over all the rest local movers. They communicated professionally, explained why it is absolutely necessary to take care of your conditioners twice a year. I will come back soon to them again and will recommend it to my friends and relatives.</p>
                             
                             <div class="reviews__person-block person-block">
@@ -250,6 +263,7 @@
             <p class="faq-block__answer">Answer</p>
         </div>
     </section>
+    
 </main>
 <div class="header-title-menu">
     <a class="header-title-menu__logo-container" href="/">
@@ -264,7 +278,7 @@
     </ul>
 
     <div class="header-call header-call-menu header-call-menu--pos cb-btn">
-        <img class="header-call__img header-call-menu__img" src="./images/phone.svg" alt="phone">
+        <img class="header-call__img header-call-menu__img" src="/images/phone.svg" alt="phone">
         <span class="header-call__text header-call-menu__text">
             Call me back
         </span>
@@ -283,7 +297,7 @@
     </ul>
 
     <div class="header-call header-call-menu header-call-menu--pos cb-btn">
-        <img class="header-call__img header-call-menu__img" src="./images/phone.svg" alt="phone">
+        <img class="header-call__img header-call-menu__img" src="/images/phone.svg" alt="phone">
         <span class="header-call__text header-call-menu__text">
             Call me back
         </span>
@@ -361,7 +375,7 @@
 </div>
     <footer class="footer">
         <div class="footer__inner-container">
-            <img class="footer__logo" src="./images/logo.svg" alt="logo">
+            <img class="footer__logo" src="/images/logo.svg" alt="logo">
             <span class="footer__title">FIXCONDITIONER</span>
             <ul class="footer__links">
                 <li class="footer__link-wrapper">
@@ -396,7 +410,7 @@
             </ul>
         </div>
     </footer>
-   <script src="js/main.min.js"></script> 
+   <script src="/js/main.min.js?v=90d86290666fb9de7f585d25c79c06fa"></script> 
 </body>
 </html>
 

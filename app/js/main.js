@@ -157,22 +157,58 @@ if (faqBtn.length) {
 
 // скролл до блока cleaning по нажатию на why-scroll
 const whyScroll = document.querySelector('.why-scroll');
+const whyScrollAll = document.querySelectorAll('.why-scroll');
 
-if (whyScroll) {
-    whyScroll.addEventListener('click', function(event) {
-        event.preventDefault();
-        const cleaningBlock = document.querySelector('.el-to-scroll');
-        if (cleaningBlock) {
-            headerMenu.classList.remove('header-title-menu--active');
-            modalOverlay.classList.remove('modal-overlay--show');
-            headerBrg.classList.remove('header-brg--active');
-            bodyEl.classList.remove('body-fixed');
-        
-            cleaningBlock.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+if (whyScrollAll.length) {
+    for (let el of whyScrollAll) {
+        el.addEventListener('click', function(event) {
+            event.preventDefault();
+            const cleaningBlock = document.querySelector('.el-to-scroll');
+            const rect = cleaningBlock.getBoundingClientRect().top;
+
+            if (cleaningBlock) {
+                headerMenu.classList.remove('header-title-menu--active');
+                modalOverlay.classList.remove('modal-overlay--show');
+                headerBrg.classList.remove('header-brg--active');
+                headerCall.classList.remove('header-call--overlayed');
+                bodyEl.classList.remove('body-fixed');
+                el.blur();
+            
+                // cleaningBlock.scrollIntoView({
+                //     behavior: 'smooth',
+                //     block: 'start'
+                // });
+
+                // функция определения координат
+                function offset(el) {
+                    var convertPoint = window.webkitConvertPointFromNodeToPage;
+                    if ('getBoundingClientRect' in el) {
+                        var
+                            boundingRect = el.getBoundingClientRect(),
+                            body = document.body || document.getElementsByTagName("body")[0],
+                            clientTop = document.documentElement.clientTop || body.clientTop || 0,
+                            clientLeft = document.documentElement.clientLeft || body.clientLeft || 0,
+                            scrollTop = (window.pageYOffset || document.documentElement.scrollTop || body.scrollTop),
+                            scrollLeft = (window.pageXOffset || document.documentElement.scrollLeft || body.scrollLeft);
+                        return {
+                            top: boundingRect.top + scrollTop - clientTop,
+                            left: boundingRect.left + scrollLeft - clientLeft
+                        }
+                    // условие для mobile safari
+                    } else if (convertPoint) {
+                        var
+                            zeroPoint = new WebKitPoint(0, 0),
+                            point = convertPoint(el, zeroPoint),
+                            scale = convertPoint(document.getElementById('scalingEl'), zeroPoint);
+                        return {
+                            top: Math.round(point.y * -200/scale.y),
+                            left: Math.round(point.x * -200/scale.x)
+                        }
+                    }
+                }
+
+                window.scroll({ top: offset(cleaningBlock).top, left: 0, behavior: 'smooth' });
+            }
+        });
+    }
 }
-

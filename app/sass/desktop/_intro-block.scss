@@ -1,0 +1,43 @@
+.intro-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.intro-block--pos {
+    padding-top: 0;
+}
+
+.intro-block__inner-container {
+    flex-direction: row;
+    gap: 20px;
+
+    picture {
+        order: 1;
+    }
+}
+
+.intro-block__right-content {
+    order: 0;
+}
+
+.intro-block__main-img {
+    max-width: 462px;
+}
+
+.intro-block__header {
+    margin-bottom: 30px;
+    max-width: none;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.intro-block__desc {
+    max-width: 586px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;   
+    text-align: left; 
+}

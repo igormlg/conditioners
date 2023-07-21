@@ -54,7 +54,7 @@
     &:hover {
         text-shadow: 1px 1px 2px rgb(161, 161, 161);
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 2px;
             transition: top .2s;

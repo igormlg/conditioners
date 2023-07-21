@@ -47,7 +47,7 @@
         text-decoration: underline;
         transition: color .2s;
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 1px;
             transition: top .2s;
@@ -90,7 +90,7 @@
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
         transition: box-shadow .2s;
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 1px;
             transition: top .2s;
@@ -105,17 +105,17 @@
 }
 
 .footer__social-link--instagram {
-    background-image: url(./images/instagram.svg);
+    background-image: url(/images/instagram.svg);
 }
 
 .footer__social-link--vk {
-    background-image: url(./images/vk.svg);
+    background-image: url(/images/vk.svg);
 }
 
 .footer__social-link--telegram {
-    background-image: url(./images/telegram.svg);
+    background-image: url(/images/telegram.svg);
 }
 
 .footer__social-link--whatsapp {
-    background-image: url(./images/whatsapp.svg);
+    background-image: url(/images/whatsapp.svg);
 }

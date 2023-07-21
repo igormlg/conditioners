@@ -74,7 +74,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
 
-    background-image: url(./images/select-arrow.svg);
+    background-image: url(/images/select-arrow.svg);
     background-position: right 11px center;
     background-repeat: no-repeat;
     background-color: #fff;
@@ -119,9 +119,10 @@
   }
 
 .filter-input-radio:checked + label::before {
-    background-image: url(./images/check-done.svg);
+    background-image: url(/images/check-done.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-color: $second-blue;
     border: none;
 }
 
@@ -141,7 +142,7 @@
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
         transition: color .2s, box-shadow .2s;
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 2px;
             transition: top .2s;

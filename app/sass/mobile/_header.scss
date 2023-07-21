@@ -49,7 +49,7 @@
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
         transition: color .2s, box-shadow .2s;
 
-        @media (max-width: 640px) {
+        @media (max-width: 767px){
             position: relative;
             top: 2px;
             transition: top .2s;
@@ -124,4 +124,8 @@
             }
         }
     }
+}
+
+.desktop-menu {
+    display: none;
 }
