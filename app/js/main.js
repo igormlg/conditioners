@@ -87,7 +87,6 @@ function sliderStart(slider) {
 
     function initSlider() {
         widthS = slider.querySelector('.slider').offsetWidth;
-        console.log(widthS)
         sliderLine.style.width = widthS * imagesS.length + 'px';
 
         imagesS.forEach(item => {
