@@ -16,9 +16,11 @@
     font-size: 24px;
     font-weight: 500;
     line-height: normal;
+    text-align: center;
 }
 
 .join-block__text {
+    display: block;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 500;
@@ -32,6 +34,7 @@
     border-radius: 15px;
     background-color: #fff;
     cursor: pointer;
+    color: #000;
 
     &:hover {
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
@@ -48,4 +51,8 @@
         top: 2px;
         transition: top .2s;
     }
+}
+
+.desk-heading-space {
+    display: none;
 }

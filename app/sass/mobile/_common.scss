@@ -7,6 +7,11 @@
     font-size: 16px;
     line-height: normal;
     color: $second-blue;
+
+    @media (min-width: 768px) {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
 }
 
 .section-desc {
@@ -15,4 +20,11 @@
     font-weight: 500;
     line-height: normal;
     color: $text-color1;
+
+    @media (min-width: 768px) {
+        margin-bottom: 50px;
+        max-width: 660px;
+        font-size: 40px;
+        font-weight: 600;
+    }
 }

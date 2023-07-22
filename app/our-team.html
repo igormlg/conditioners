@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.min.css?v=222d0fd7134e00b7abb0d73436318572">
+    <link rel="stylesheet" href="/css/style.min.css?v=fcd94f0dfd9b7b44d083fbfe1c71abfe">
 </head>
 <body>
     <header class="main-header">
@@ -12,21 +12,24 @@
             <a href="/" class="header-title">
                 <img class="header-title__img" src="/images/logo.svg" alt="">
                 <span class="header-title__text" >FIXCONDITIONER</span>
-                <ul class="desktop-menu">
-                    <li class="desktop-menu__item">
-                        <a class="desktop-menu__link why-scroll" href="#">Why do you need to clean</a>
-                    </li>
-                    <li class="desktop-menu__item">
-                        <a class="desktop-menu__link" href="our-team.html">Our team</a>
-                    </li>
-                    <li class="desktop-menu__item">
-                        <a class="desktop-menu__link" href="#">Contact</a>
-                    </li>
-                </ul>
             </a>
+            <ul class="desktop-menu">
+                <li class="desktop-menu__item">
+                    <a class="desktop-menu__link why-scroll" href="#">Why do you need to clean</a>
+                </li>
+                <li class="desktop-menu__item">
+                    <a class="desktop-menu__link" href="our-team.html">Our team</a>
+                </li>
+                <li class="desktop-menu__item">
+                    <a class="desktop-menu__link" href="#">Contact</a>
+                </li>
+            </ul>
             <div class="header-rb">
                 <div class="header-call cb-btn">
-                    <img class="header-call__img" src="/images/phone.svg" alt="phone">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/images/phone-desktop.svg">
+                        <img class="header-call__img" src="/images/phone.svg" alt="phone">
+                    </picture>
                     <span class="header-call__text">
                         Call me back
                     </span>
@@ -229,33 +232,42 @@
 
 <div class="callback-menu">
     <div class="callback-menu__inner-container">
+        <div class="desktop-close-menu desktop-close-menu--show"></div>
         <h2 class="callback-menu__title">Header</h2>
         <form class="callback-form" action="" name="callback-form">
             <h3 class="callback-form__heading-h2">My name is</h3>
-            <div class="field-wrapper">
-                <label class="callback-form__label" for="first-name">First name</label>
-                <input class="callback-form__text-input" id="first-name" type="text" placeholder="Adrian">
-            </div>
-            <div class="field-wrapper">
-                <label class="callback-form__label" for="last-name">Last name</label>
-                <input class="callback-form__text-input" id="last-name" type="text" placeholder="Markov">
-            </div>
-
-            <h3 class="callback-form__heading-h2">I live in</h3>
-            <div class="field-wrapper">
-                <label class="callback-form__label" for="state-select">State</label>
-                <select class="callback-form__text-input" id="state-select" type="select">
-                    <option value="Location" disabled selected hidden>Location</option>
-                    <option value="state1" class="select-option">State1</option>
-                    <option value="state2" class="select-option">State2</option>
-                    <option value="state3" class="select-option">State3</option>
-                </select>
+            <div class="name-fields-wrapper">
+                <div class="field-wrapper">
+                    <label class="callback-form__label" for="first-name">First name</label>
+                    <input class="callback-form__text-input" id="first-name" type="text" placeholder="Adrian">
+                </div>
+                <div class="field-wrapper">
+                    <label class="callback-form__label" for="last-name">Last name</label>
+                    <input class="callback-form__text-input" id="last-name" type="text" placeholder="Markov">
+                </div>
             </div>
 
-            <h3 class="callback-form__heading-h2">Contact number</h3>
-            <div class="field-wrapper">
-                <label class="callback-form__label" for="callback-tel">Phone</label>
-                <input class="callback-form__text-input callback-tel" id="callback-tel" type="tel" placeholder="Number">
+            <div class="union-wrapper">
+                <div class="state-fields-wrapper">
+                    <h3 class="callback-form__heading-h2">I live in</h3>
+                    <div class="field-wrapper">
+                        <label class="callback-form__label" for="state-select">State</label>
+                        <select class="callback-form__text-input" id="state-select" type="select">
+                            <option value="Location" disabled selected hidden>Location</option>
+                            <option value="state1" class="select-option">State1</option>
+                            <option value="state2" class="select-option">State2</option>
+                            <option value="state3" class="select-option">State3</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="number-filds-wrapper">
+                    <h3 class="callback-form__heading-h2">Contact number</h3>
+                    <div class="field-wrapper">
+                        <label class="callback-form__label" for="callback-tel">Phone</label>
+                        <input class="callback-form__text-input callback-tel" id="callback-tel" type="tel" placeholder="Number">
+                    </div>
+                </div>
             </div>
 
             <h3 class="callback-form__heading-h2">When we could get contact you</h3>
@@ -331,6 +343,6 @@
             </ul>
         </div>
     </footer>
-    <script src="/js/main.min.js?v=222d0fd7134e00b7abb0d73436318572"></script>
+    <script src="/js/main.min.js?v=fcd94f0dfd9b7b44d083fbfe1c71abfe"></script>
 </body>
 </html>

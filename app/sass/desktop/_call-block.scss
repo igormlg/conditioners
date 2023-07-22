@@ -1,0 +1,43 @@
+.call-block {
+    margin-bottom: 150px;
+    padding: 60px 60px 30px;
+}
+
+.call-block__inner-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 88px;
+}
+
+.call-block__text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 264px;
+}
+
+.section-desc {
+    text-align: left;
+}
+
+.call-block__text {
+    text-align: left;
+    font-size: 20px;
+}
+
+.call-block__form-container {
+    max-width: 314px;
+}
+
+.call-check__input {
+    font-size: 20px;
+}
+
+#call-check__input+label::before {
+    top: 3px;
+}
+
+.call-block-form__enter-inputs-container {
+    @media (min-width: 1280px) {
+        display: flex;
+    }
+}

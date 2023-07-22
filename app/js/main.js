@@ -70,6 +70,7 @@ window.onkeydown = function(event) {
 // установка событий по нажатию кнопок Call me back 
 for (let e = 0; e < cbBtn.length; e++) {
     cbBtn[e].addEventListener('click', function() {
+        console.log(headerBrg)
         callbackMenu.classList.add('callback-menu--show')
         headerBrg.classList.add('header-brg--active');
         modalOverlay.classList.add('modal-overlay--callback-show');
@@ -155,16 +156,15 @@ if (faqBtn.length) {
 }
 
 // скролл до блока cleaning по нажатию на why-scroll
-const whyScroll = document.querySelector('.why-scroll');
 const whyScrollAll = document.querySelectorAll('.why-scroll');
+let userAgentString = navigator.userAgent;
 
 if (whyScrollAll.length) {
     for (let el of whyScrollAll) {
         el.addEventListener('click', function(event) {
             event.preventDefault();
             const cleaningBlock = document.querySelector('.el-to-scroll');
-            const rect = cleaningBlock.getBoundingClientRect().top;
-
+            
             if (cleaningBlock) {
                 headerMenu.classList.remove('header-title-menu--active');
                 modalOverlay.classList.remove('modal-overlay--show');
@@ -172,42 +172,27 @@ if (whyScrollAll.length) {
                 headerCall.classList.remove('header-call--overlayed');
                 bodyEl.classList.remove('body-fixed');
                 el.blur();
-            
-                // cleaningBlock.scrollIntoView({
-                //     behavior: 'smooth',
-                //     block: 'start'
-                // });
-
-                // функция определения координат
-                function offset(el) {
-                    var convertPoint = window.webkitConvertPointFromNodeToPage;
-                    if ('getBoundingClientRect' in el) {
-                        var
-                            boundingRect = el.getBoundingClientRect(),
-                            body = document.body || document.getElementsByTagName("body")[0],
-                            clientTop = document.documentElement.clientTop || body.clientTop || 0,
-                            clientLeft = document.documentElement.clientLeft || body.clientLeft || 0,
-                            scrollTop = (window.pageYOffset || document.documentElement.scrollTop || body.scrollTop),
-                            scrollLeft = (window.pageXOffset || document.documentElement.scrollLeft || body.scrollLeft);
-                        return {
-                            top: boundingRect.top + scrollTop - clientTop,
-                            left: boundingRect.left + scrollLeft - clientLeft
-                        }
-                    // условие для mobile safari
-                    } else if (convertPoint) {
-                        var
-                            zeroPoint = new WebKitPoint(0, 0),
-                            point = convertPoint(el, zeroPoint),
-                            scale = convertPoint(document.getElementById('scalingEl'), zeroPoint);
-                        return {
-                            top: Math.round(point.y * -200/scale.y),
-                            left: Math.round(point.x * -200/scale.x)
-                        }
-                    }
-                }
-
-                window.scroll({ top: offset(cleaningBlock).top, left: 0, behavior: 'smooth' });
+                
+                setTimeout(function() {
+                    const rect = cleaningBlock.getBoundingClientRect();
+                    window.scroll({ top: rect.y, left: 0, behavior: 'smooth' });
+                }, 100)
             }
         });
     }
 }
+
+// закрытие модального окна на десктопе
+const deskCloseMenu = document.querySelector('.desktop-close-menu');
+deskCloseMenu.addEventListener('click', function() {
+    modalOverlay.classList.remove('modal-overlay--show');
+    modalOverlay.classList.remove('modal-overlay--callback-show');
+    callbackMenu.classList.remove('callback-menu--show');
+});
+
+// закрытие модального окна на десктопе по нажатию на оверлей
+modalOverlay.addEventListener('click', function(event) {
+    modalOverlay.classList.remove('modal-overlay--show');
+    modalOverlay.classList.remove('modal-overlay--callback-show');
+    callbackMenu.classList.remove('callback-menu--show');
+});

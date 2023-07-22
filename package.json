@@ -34,7 +34,6 @@
     "inputmask": "^5.0.8",
     "npm": "^9.8.1",
     "sass": "^1.63.6",
-    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^10.0.4"
   },
   "dependencies": {}

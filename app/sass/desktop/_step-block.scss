@@ -1,0 +1,25 @@
+.step-block {
+    margin-bottom: 150px;
+}
+
+.step-block__items-wrapper {
+    display: flex;
+    column-gap: 84px;
+    justify-content: space-around;
+}
+
+.step-block__icon {
+    width: 83px;
+    height: 83px;
+    margin-bottom: 20px;
+    background-size: 60px;
+}
+
+.step-block__heading {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.step-block__text {
+    font-size: 28px;
+}

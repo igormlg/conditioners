@@ -1,0 +1,46 @@
+.our-work {
+    margin-bottom: 150px;
+}
+.our-work__slider-wrapper {
+    display: flex;
+    column-gap: 128px;
+}
+
+.slider-block {
+    width: calc(50% - 64px);
+}
+
+.our-work__slider-wrapper {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-image: url(/images/arrow-slider-desktop.svg);
+    }
+}
+
+.slider-block--desk-01 {
+    padding: 23px 22px 28px;
+    margin-bottom: 0;
+    border-radius: 15px;
+}
+
+.slider-block__heading {
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.slider-block__desc {
+    font-size: 20px;
+}
+
+.slider-block__phrase {
+    font-size: 20px;
+}
