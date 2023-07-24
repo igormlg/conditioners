@@ -92,11 +92,15 @@
     }
 }
 
-.revies-btn-wrapper {
+.reviews-btn-wrapper {
     position: absolute;
     top: calc(100% + 30px);
     display: flex;
     column-gap: 38px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.reviews__btn-more {
+    display: none;
 }

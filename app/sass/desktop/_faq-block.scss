@@ -1,0 +1,17 @@
+.faq-block {
+    margin-bottom: 150px;
+}
+
+.faq-block__content-wrapper {
+    display: flex;
+    column-gap: 70px;
+}
+
+.faq-block__image {
+    display: block;
+    max-width: 550px;
+}
+
+.faq-block__items_wrapper {
+    flex-grow: 1;
+}

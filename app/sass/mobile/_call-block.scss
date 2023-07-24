@@ -26,6 +26,8 @@
 .call-block-form {
     display: flex;
     flex-direction: column;
+    max-width: 314px;
+    margin: 0 auto;
 }
 
 .call-tel {

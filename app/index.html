@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.min.css?v=fcd94f0dfd9b7b44d083fbfe1c71abfe">
+    <link rel="stylesheet" href="/css/style.min.css?v=9fb0a09cee6d2e3462982a7e583c058a">
 </head>
 <body>
     <header class="main-header">
@@ -208,7 +208,7 @@
             <p class="section-desc">Read the reviews of our customers</p>
             <div class="slider-block slider-block--reviews">
                 <div class="slider slider--reviews">
-                    <div class="slider-line">
+                    <div class="slider-line slider-line--reviews">
                         <div class="reviews__item slider-img">
                             <img class="reviews__stars" src="/images/stars-blue.svg" alt="avatar">
                             <p class="reviews__text">The conditioner crew at FixConditioner is wonderful! They were punctual, efficient and made my cleaning experience the best I have ever had. They had all jobs done within 2 hours. This is who you need to call if you need help with your conditioner, thank you guys!</p>
@@ -248,7 +248,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="revies-btn-wrapper">
+                    <button class="reviews__btn-more">Read more</button>
+                    <div class="reviews-btn-wrapper">
                         <button class="slider-btn slider-prev slider-prev--reviews"></button>
                         <button class="slider-btn slider-next slider-next--reviews"></button>
                     </div>
@@ -259,21 +260,26 @@
     <section class="faq-block">
         <h2 class="our-work__title section-title">FAQ</h2>
         <p class="our-work__desc section-desc">We answer your questions in advance</p>
-        <div class="faq-block__item">
-            <p class="faq-block__question">Question 1<button class="faq-block__btn"></button></p>
-            <p class="faq-block__answer">Answer</p>
-        </div>
-        <div class="faq-block__item">
-            <p class="faq-block__question">Question 2<button class="faq-block__btn"></button></p>
-            <p class="faq-block__answer">Answer</p>
-        </div>
-        <div class="faq-block__item">
-            <p class="faq-block__question">Question 3<button class="faq-block__btn"></button></p>
-            <p class="faq-block__answer">Answer</p>
-        </div>
-        <div class="faq-block__item">
-            <p class="faq-block__question">Question 4<button class="faq-block__btn"></button></p>
-            <p class="faq-block__answer">Answer</p>
+        <div class="faq-block__content-wrapper">
+            <div class="faq-block__items_wrapper">
+                <div class="faq-block__item">
+                    <p class="faq-block__question">Question 1<button class="faq-block__btn"></button></p>
+                    <p class="faq-block__answer">Answer</p>
+                </div>
+                <div class="faq-block__item">
+                    <p class="faq-block__question">Question 2<button class="faq-block__btn"></button></p>
+                    <p class="faq-block__answer">Answer</p>
+                </div>
+                <div class="faq-block__item">
+                    <p class="faq-block__question">Question 3<button class="faq-block__btn"></button></p>
+                    <p class="faq-block__answer">Answer</p>
+                </div>
+                <div class="faq-block__item">
+                    <p class="faq-block__question">Question 4<button class="faq-block__btn"></button></p>
+                    <p class="faq-block__answer">Answer</p>
+                </div>
+            </div>
+            <img class="faq-block__image" src="/images/faq-image.jpg" alt="faq-image">
         </div>
     </section>
     
@@ -397,8 +403,10 @@
 </div>
     <footer class="footer">
         <div class="footer__inner-container">
-            <img class="footer__logo" src="/images/logo.svg" alt="logo">
-            <span class="footer__title">FIXCONDITIONER</span>
+            <div class="footer__logo-container">
+                <img class="footer__logo" src="/images/logo.svg" alt="logo">
+                <span class="footer__title">FIXCONDITIONER</span>
+            </div>
             <ul class="footer__links">
                 <li class="footer__link-wrapper">
                     <a class="footer__link" href="">Terms of use</a>
@@ -414,25 +422,26 @@
                 </li>
             </ul>
 
-            <span class="footer__follow-text" href="">Follow US</span>
-
-            <ul class="footer__social-links">
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link--instagram" href=""></a>
-                </li>
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link--vk" href=""></a>
-                </li>
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link--telegram" href=""></a>
-                </li>
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link--whatsapp" href=""></a>
-                </li>
-            </ul>
+            <div class="footer__social-links-container">
+                <span class="footer__follow-text" href="">Follow US</span>
+                <ul class="footer__social-links">
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link--instagram" href=""></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link--vk" href=""></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link--telegram" href=""></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link--whatsapp" href=""></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
-    <script src="/js/main.min.js?v=fcd94f0dfd9b7b44d083fbfe1c71abfe"></script>
+    <script src="/js/main.min.js?v=9fb0a09cee6d2e3462982a7e583c058a"></script>
 </body>
 </html>
 

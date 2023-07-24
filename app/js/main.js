@@ -70,7 +70,6 @@ window.onkeydown = function(event) {
 // установка событий по нажатию кнопок Call me back 
 for (let e = 0; e < cbBtn.length; e++) {
     cbBtn[e].addEventListener('click', function() {
-        console.log(headerBrg)
         callbackMenu.classList.add('callback-menu--show')
         headerBrg.classList.add('header-brg--active');
         modalOverlay.classList.add('modal-overlay--callback-show');
@@ -124,9 +123,11 @@ function sliderStart(slider) {
 }
 
 for (let el of document.querySelectorAll('.slider-block')) {
+    if (el.classList.contains('slider-block--reviews') && window.screen.width > 1280) {
+        continue;
+    }
     sliderStart(el);
 }
-
 // inputmask for phone
 let telInput = document.querySelectorAll('input[type="tel"]')
 let im = new Inputmask("+7 (999) 999 - 99 - 99", { showMaskOnHover: false });
@@ -188,6 +189,7 @@ deskCloseMenu.addEventListener('click', function() {
     modalOverlay.classList.remove('modal-overlay--show');
     modalOverlay.classList.remove('modal-overlay--callback-show');
     callbackMenu.classList.remove('callback-menu--show');
+    bodyEl.classList.remove('body-fixed');
 });
 
 // закрытие модального окна на десктопе по нажатию на оверлей
@@ -195,4 +197,5 @@ modalOverlay.addEventListener('click', function(event) {
     modalOverlay.classList.remove('modal-overlay--show');
     modalOverlay.classList.remove('modal-overlay--callback-show');
     callbackMenu.classList.remove('callback-menu--show');
+    bodyEl.classList.remove('body-fixed');
 });
