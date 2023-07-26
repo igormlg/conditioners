@@ -1,21 +1,39 @@
 
-// const box = document.querySelector('.main');
+// форма conditioner-form
+const getItBtn = document.querySelector('#get-it-btn');
+console.log(getItBtn)
+const dataCall = {}
+if (getItBtn) {
+    getItBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        const zipCode = document.querySelector('input[name=zip]')
+        const zipCodeValue = zipCode.value;
 
-// box.addEventListener('click', function () {
-//     fetch('/php-scripts/telegram-send.php', {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json'
-//     })
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data)
-//     })
-//     .catch((er) => {
-//         console.log(er)
-//     })
-// })
+        if (zipCodeValue === '') {
+            return;
+        }
+        
+        dataCall.zip = zipCode.value
+        axios('/php-scripts/telegram-send.php')
+            .then(function (response) {
+            console.log(response);
+        });
+        // fetch('/php-scripts/telegram-send.php', {
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json'
+        // })
+        // .then((response) => {
+        //     // console.log(response, 'resp')
+        //     return response.json();
+        // })
+        // .then((data) => {
+        //     console.log(data)
+        // })
+        // .catch((er) => {
+        //     console.log(er, 'ee')
+        // })
+    })
+}
 
 const headerBrg = document.querySelector('.header-brg');
 const headerMenu = document.querySelector('.header-title-menu');
@@ -136,11 +154,47 @@ if (telInput) {
     im.mask(telInput)
 }
 
-// отключение события по умолчанию на кнопке формы
+// обработка событий на кнопке формы call-block
 const callBtn = document.querySelector('.call-btn');
 if (callBtn) {
     callBtn.addEventListener('click', function(event) {
         event.preventDefault();
+        const callBlockPhone = document.querySelector('.call-tel');
+
+        if (callBlockPhone.inputmask) {
+            const unmaskedPhone = callBlockPhone.inputmask.unmaskedvalue();
+
+            if (unmaskedPhone.length !== 10) {
+                function inputListener() {
+                    callBlockPhone.classList.remove('call-tel-wrong');
+                }
+                callBlockPhone.addEventListener('input', inputListener); 
+                callBlockPhone.classList.add('call-tel-wrong'); 
+
+                if (callBlockPhone.classList.contains('call-tel-wrong')) {
+                    callBlockPhone.classList.remove('call-tel-wrong');
+                    window.setTimeout(() => {
+                        callBlockPhone.classList.add('call-tel-wrong');
+                      }, 50);
+                }
+            } else {
+                callBlockPhone.removeEventListener('input', inputListener);
+
+                axios({
+                    method: 'post',
+                    url: '/php-scripts/telegram-send.php',
+                    data: {
+                      phone: callBlockPhone,
+                      form: 'call-block-form'
+                    }
+                })
+                .then(function (response) {
+                    console.log(response);
+                });
+            }
+        }
+        const callBlockPhoneVal = callBlockPhone.value;
+
     });
 }
 

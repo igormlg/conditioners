@@ -77,6 +77,7 @@ export function styles() {
 export function scripts() {
     return gulp.src([
         'node_modules/inputmask/dist/inputmask.min.js',
+        'node_modules/axios/dist/axios.min.js',
         // 'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
         'app/js/main.js',
     ])

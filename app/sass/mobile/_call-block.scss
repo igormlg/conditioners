@@ -119,3 +119,9 @@
         transition: color .2s;
     }
 }
+
+.call-tel-wrong {
+    border: 1px solid red;
+    animation-name: shake;
+    animation-duration: 0.6s;
+}
