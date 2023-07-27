@@ -6,8 +6,10 @@
     list-style: none;
 }
 
-.header-brg {
-    display: none;
+@media (min-width: 1024px) {
+    .header-brg {
+        display: none;
+    }
 }
 
 .desktop-menu__link {

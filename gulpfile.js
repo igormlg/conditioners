@@ -12,30 +12,17 @@ import imagemin from 'gulp-imagemin';
 import newer from 'gulp-newer';
 import include from 'gulp-include';
 import cleanCSS from 'gulp-clean-css';
-import version from 'gulp-version-number'
-// import fileinclude from 'gulp-file-include';
+// import version from 'gulp-version-number'
+import rev from 'gulp-rev';
+import revCollector from 'gulp-rev-collector';  
 
 const sass = gulpSass(dartSass);
 
 export function pages() {
-    const versionConfig = {
-        'value': '%MDS%',
-        'append': {
-          'key': 'v',
-          'to': ['css', 'js'],
-        },
-    };
 
     return gulp.src('app/pages/*.html')
         .pipe(include({
             includePaths: 'app/components'
-        }))
-        .pipe(version({
-            'value': '%MDS%',
-            'append': {
-                'key': 'v',
-                'to': ['css', 'js'],
-            },
         }))
         .pipe(gulp.dest('app'))
         .pipe(browserSync.stream())
@@ -74,11 +61,38 @@ export function styles() {
         .pipe(browserSync.stream());
 }
 
+export function revCss() {
+    return gulp.src('app/css/style.min.css')  
+        .pipe(rev())  
+        .pipe(gulp.dest('dist/css'))  
+        .pipe(rev.manifest())  
+        .pipe(gulp.dest('rev/css'));  
+}
+
+export function revJs() {
+    return gulp.src('app/js/main.min.js')  
+        .pipe(rev())  
+        .pipe(gulp.dest('dist/js'))  
+        .pipe(rev.manifest())  
+        .pipe(gulp.dest('rev/js'));  
+}
+
+export function revHtmlCss() {
+    return gulp.src(['rev/**/*.json', 'dist/*.html'])  
+    .pipe(revCollector({
+        replaceReved: true,
+        dirReplacements: {
+            'css': 'css',
+            '/js/': 'js/',
+        }
+    })) 
+    .pipe(gulp.dest('dist')); 
+}
+
 export function scripts() {
     return gulp.src([
         'node_modules/inputmask/dist/inputmask.min.js',
         'node_modules/axios/dist/axios.min.js',
-        // 'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
         'app/js/main.js',
     ])
         .pipe(concat('main.min.js'))
@@ -124,5 +138,5 @@ export function building() {
     .pipe(gulp.dest('dist'))
 }
 
-export const build = gulp.series(cleanDist, building);
+export const build = gulp.series(cleanDist, building, revCss, revJs, revHtmlCss);
 export const start = gulp.parallel(styles, scripts, images, pages, watching);

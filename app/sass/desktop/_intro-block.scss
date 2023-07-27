@@ -12,7 +12,8 @@
     }
 }
 
-@media (min-width: 1280px) {
+
+@media (min-width: 1024px) {
     .intro-block__inner-container {
     
         flex-direction: row;
@@ -60,18 +61,30 @@
 }
 
 .conditioner-form {
+    justify-content: flex-start;
+    align-items: center;
+
     @media (min-width: 1280px) {
-        flex-direction: row;
-        width: 110%;
+        // flex-direction: row;
+        width: 100%;
         flex-wrap: wrap;
         column-gap: 15px;
     }
 }
 
 .conditioner-form__input {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+        width: 61%;
+        max-width: 311px;
+        align-self: center;
+        margin: 0;
+    }
     
     @media (min-width: 1280px) {
+        margin: 0;
         width: 48%;
     }
 
@@ -80,9 +93,25 @@
 }
 
 .intro-block__btn {
+    width: 50%;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+        width: 61%;
+        max-width: 311px;
+        margin: 0;
+    }
+
     @media (min-width: 1280px) {
         width: 49%;
     }
     padding: 10px 50px;
     font-size: 20px;
+}
+
+.intro-block3-select {
+
+    option {
+        background-image: url(/images/select-arrow.svg);
+    }
 }

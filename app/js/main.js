@@ -160,6 +160,14 @@ if (callBtn) {
     callBtn.addEventListener('click', function(event) {
         event.preventDefault();
         const callBlockPhone = document.querySelector('.call-tel');
+        const callCheckInput = document.querySelector('#call-check__input');
+        const callCheckLabel = document.querySelector('.call-check label');
+
+        callCheckLabel.addEventListener('click', function() {
+            if (callCheckLabel.classList.contains('call-tel-wrong')) {
+                callCheckLabel.classList.remove('call-tel-wrong');
+            }
+        });
 
         if (callBlockPhone.inputmask) {
             const unmaskedPhone = callBlockPhone.inputmask.unmaskedvalue();
@@ -177,24 +185,34 @@ if (callBtn) {
                         callBlockPhone.classList.add('call-tel-wrong');
                       }, 50);
                 }
+            } else if (!callCheckInput.checked) {
+                if (callCheckLabel.classList.contains('call-tel-wrong')) {
+                    callCheckLabel.classList.remove('call-tel-wrong');
+                    window.setTimeout(() => {
+                        callCheckLabel.classList.add('call-tel-wrong');
+                    });
+                } else {
+                    callCheckLabel.classList.add('call-tel-wrong');
+                }
             } else {
                 callBlockPhone.removeEventListener('input', inputListener);
-
+                const transformNumber = (callBlockPhone.value).split(' ').join('')
                 axios({
                     method: 'post',
                     url: '/php-scripts/telegram-send.php',
                     data: {
-                      phone: callBlockPhone,
+                      phone: transformNumber,
                       form: 'call-block-form'
                     }
                 })
                 .then(function (response) {
-                    console.log(response);
+                    console.log(response.data.status);
+                    if (response.data.status === 'ok') {
+                        callBlockPhone.value = '';
+                    }
                 });
             }
         }
-        const callBlockPhoneVal = callBlockPhone.value;
-
     });
 }
 

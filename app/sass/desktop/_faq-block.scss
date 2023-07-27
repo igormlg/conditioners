@@ -9,9 +9,21 @@
 
 .faq-block__image {
     display: block;
-    max-width: 550px;
+    max-width: 350px;
+    
+    @media (min-width: 1280px) {
+        max-width: 550px;
+    }
 }
 
 .faq-block__items_wrapper {
     flex-grow: 1;
+}
+
+.faq-block__item {
+    padding-right: 20px;
+}
+
+.faq-block__question {
+    padding-right: 32px;
 }

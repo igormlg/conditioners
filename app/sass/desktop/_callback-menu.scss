@@ -1,20 +1,24 @@
-.callback-menu--show {
-    width: auto;
-    height: auto;
-    padding: 40px 40px 25px;
-    top: calc(50% - 381px);
-    left: calc(50% - 465px);
-    background-color: #fff;
-    box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+@media (min-width: 1024px) {
+    .callback-menu--show {
+        width: auto;
+        height: auto;
+        padding: 40px 40px 25px;
+        top: calc(50% - 381px);
+        left: calc(50% - 465px);
+        background-color: #fff;
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    .name-fields-wrapper {
+        display: flex;
+    }
+
+    .union-wrapper {
+        display: flex;
+    }
 }
 
-.name-fields-wrapper {
-    display: flex;
-}
 
-.union-wrapper {
-    display: flex;
-}
 
 .callback-menu__title {
     margin-bottom: 63px;
@@ -26,36 +30,39 @@
     position: relative;
 }
 
-.desktop-close-menu--show {
-    display: block;
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-
-    &::after, &::before{
-        content: '';
+@media (min-width: 1024px) {
+    .desktop-close-menu--show {
+        display: block;
         position: absolute;
-        top: 16px;
-        right: 0;
         width: 34px;
-        height: 2px;
-        background-color: $second-blue;
-    }
-
-    &::before {
-        transform: rotate(45deg);
-    }
-
-    &::after {
-        transform: rotate(-45deg);
+        height: 34px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    
+        &::after, &::before{
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 0;
+            width: 34px;
+            height: 2px;
+            background-color: $second-blue;
+        }
+    
+        &::before {
+            transform: rotate(45deg);
+        }
+    
+        &::after {
+            transform: rotate(-45deg);
+        }
     }
 }
 
 .callback-form__heading-h2 {
     font-size: 28px;
+    text-align: left;
 }
 
 .callback-form__label {
@@ -72,7 +79,7 @@
 }
 
 #state-select {
-    background-position: right 18px center;
+    background-position: right 18px center, left 6px center;
 }
 
 .field-wrapper {
@@ -83,11 +90,13 @@
     margin-bottom: 40px;
 }
 
-.callback-form__radio-list {
-    justify-content: flex-start;
-    column-gap: 47px;
-    margin-bottom: 60px;
-    // margin-left: 22px;
+@media (min-width: 1024px) {
+    .callback-form__radio-list {
+        justify-content: flex-start;
+        column-gap: 47px;
+        margin-bottom: 60px;
+        // margin-left: 22px;
+    }
 }
 
 .callback-form__radio-el {

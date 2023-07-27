@@ -26,6 +26,10 @@
 
 .call-block__form-container {
     max-width: 314px;
+
+    @media (min-width: 1280px) {
+        max-width: 100%;
+    }
 }
 
 .call-check {

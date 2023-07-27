@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.min.css?v=57a3e7f86246922601b938da0e5a8108">
+    <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
+    
     <header class="main-header">
         <div class="main-header__inner-container">
             <a href="/" class="header-title">
@@ -54,7 +55,46 @@
                 <h1 class="intro-block__header"><div class="fp1">Clean your Air Conditioner</div> <div class="fp2">and breathe free</div></h1>
                 <p class="intro-block__desc">It's a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
                 <div class="conditioner-form">
-                    <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip">
+                    <!-- <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip"> -->
+                    <select class="conditioner-form__input conditioner-form__input--tex intro-block3-select" id="state-select" type="select" name="zip">
+                        <option value="Location" disabled selected hidden>Enter your zip</option>
+                        <optgroup label="CITIES WE SERVICE»">
+                            <option value="BALLWIN" class="select-option">BALLWIN</option>
+                            <option value="BRENTWOOD" class="select-option">BRENTWOOD</option>
+                            <option value="WEBSTERGROVES" class="select-option">WEBSTER GROVES</option>
+                            <option value="DESPERES" class="select-option">DES PERES</option>
+                            <option value="MEHLVILLE" class="select-option">MEHLVILLE</option>
+                            <option value="MEHLVILLE" class="select-option">MEHLVILLE</option>
+                        </optgroup>
+                        <optgroup label="TOWN AND COUNTRY»">
+                            <option value="CLAYTON" class="select-option">CLAYTON</option>
+                            <option value="FENTON" class="select-option">FENTON</option>
+                            <option value="ROCKHILL" class="select-option">ROCK HILL</option>
+                            <option value="CLARKSONVALLEY" class="select-option">CLARKSON VALLEY</option>
+                            <option value="GRANTWOOD VILLAGE" class="select-option">GRANTWOOD VILLAGE</option>
+                            <option value="EUREKA" class="select-option">EUREKA</option>
+                            <option value="GLENCOE" class="select-option">GLENCOE</option>
+                            <option value="KIRKWOOD" class="select-option">KIRKWOOD</option>
+                            <option value="SHREWSBURY" class="select-option">SHREWSBURY</option>
+                            <option value="FLORISSANT" class="select-option">FLORISSANT</option>
+                            <option value="LADUE" class="select-option">LADUE</option>
+                            <option value="SUNSETHILLS" class="select-option">SUNSET HILLS</option>
+                            <option value="GLENDALE" class="select-option">GLENDALE</option>
+                            <option value="MAPLEWOOD" class="select-option">MAPLEWOOD</option>
+                            <option value="OLIVETTE" class="select-option">OLIVETTE</option>
+                            <option value="FERGUSON" class="select-option">FERGUSON</option>
+                            <option value="BRIDGETON" class="select-option">BRIDGETON</option>
+                            <option value="WILDWOOD" class="select-option">WILDWOOD</option>
+                            <option value="WINCHESTER" class="select-option">WINCHESTER</option>
+                            <option value="CHESTERFIELD" class="select-option">CHESTERFIELD</option>
+                            <option value="CREVECOEUR" class="select-option">CREVE COEUR</option>
+                            <option value="MARYLANDHEIGHTS" class="select-option">MARYLAND HEIGHTS</option>
+                            <option value="RICHMONDHEIGHTS" class="select-option">RICHMOND HEIGHTS</option>
+                            <option value="FRONTENAC" class="select-option">FRONTENAC</option>
+                            <option value="CRESTWOOD" class="select-option">CRESTWOOD</option>
+                            <option value="UNIVERSITYCITY" class="select-option">UNIVERSITY CITY</option>
+                        </optgroup>
+                    </select>
                     <input class="conditioner-form__input conditioner-form__input--text2" type="text" name="install" placeholder="Where your conditioner is installed">
                     <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
                     <!-- <input type="submit"  id="get-it-btn" class="intro-block__btn intro-block__btn--v2" value="Get it"> -->
@@ -91,7 +131,7 @@
                         <button class="slider-btn slider-next"></button>
                         <div class="slider-window-title slider-window-title--bad">Before</div>
                     </div>
-                    <h3 class="slider-block__heading">Headline123</h3>
+                    <!-- <h3 class="slider-block__heading">Headline123</h3> -->
                     <p class="slider-block__desc">Dirty air conditioner circulates dust, allergens, and mold spores, leading to respiratory issues and potentially exacerbating allergies or asthma. It becomes less efficient, consuming more energy and resulting in higher electricity bills providing inadequate cooling or heating.</p>
                     <p class="slider-block__phrase">Your nose says thanks to you</p>
                 </div>
@@ -115,7 +155,7 @@
                         <button class="slider-btn slider-next"></button>
                         <div class="slider-window-title slider-window-title--good">After</div>
                     </div>
-                    <h3 class="slider-block__heading">Headline</h3>
+                    <!-- <h3 class="slider-block__heading">Headline</h3> -->
                     <p class="slider-block__desc">Clean air conditioner improves indoor air quality by efficiently filtering out pollutants, allergens, and dust, providing a healthier and more comfortable living environment. It consumes less energy and reduces utility costs maintaining optimal cooling or heating performance.</p>
                     <p class="slider-block__phrase">Last life to your conditioner</p>
                 </div>
@@ -279,7 +319,6 @@
             <img class="faq-block__image" src="/images/faq-image.jpg" alt="faq-image">
         </div>
     </section>
-    
 </main>
 <div class="header-title-menu">
     <a class="header-title-menu__logo-container" href="/">
@@ -346,9 +385,42 @@
                         <label class="callback-form__label" for="state-select">State</label>
                         <select class="callback-form__text-input" id="state-select" type="select">
                             <option value="Location" disabled selected hidden>Location</option>
-                            <option value="state1" class="select-option">State1</option>
-                            <option value="state2" class="select-option">State2</option>
-                            <option value="state3" class="select-option">State3</option>
+                            <optgroup label="CITIES WE SERVICE»">
+                                <option value="BALLWIN" class="select-option">BALLWIN</option>
+                                <option value="BRENTWOOD" class="select-option">BRENTWOOD</option>
+                                <option value="WEBSTERGROVES" class="select-option">WEBSTER GROVES</option>
+                                <option value="DESPERES" class="select-option">DES PERES</option>
+                                <option value="MEHLVILLE" class="select-option">MEHLVILLE</option>
+                                <option value="MEHLVILLE" class="select-option">MEHLVILLE</option>
+                            </optgroup>
+                            <optgroup label="TOWN AND COUNTRY»">
+                                <option value="CLAYTON" class="select-option">CLAYTON</option>
+                                <option value="FENTON" class="select-option">FENTON</option>
+                                <option value="ROCKHILL" class="select-option">ROCK HILL</option>
+                                <option value="CLARKSONVALLEY" class="select-option">CLARKSON VALLEY</option>
+                                <option value="GRANTWOOD VILLAGE" class="select-option">GRANTWOOD VILLAGE</option>
+                                <option value="EUREKA" class="select-option">EUREKA</option>
+                                <option value="GLENCOE" class="select-option">GLENCOE</option>
+                                <option value="KIRKWOOD" class="select-option">KIRKWOOD</option>
+                                <option value="SHREWSBURY" class="select-option">SHREWSBURY</option>
+                                <option value="FLORISSANT" class="select-option">FLORISSANT</option>
+                                <option value="LADUE" class="select-option">LADUE</option>
+                                <option value="SUNSETHILLS" class="select-option">SUNSET HILLS</option>
+                                <option value="GLENDALE" class="select-option">GLENDALE</option>
+                                <option value="MAPLEWOOD" class="select-option">MAPLEWOOD</option>
+                                <option value="OLIVETTE" class="select-option">OLIVETTE</option>
+                                <option value="FERGUSON" class="select-option">FERGUSON</option>
+                                <option value="BRIDGETON" class="select-option">BRIDGETON</option>
+                                <option value="WILDWOOD" class="select-option">WILDWOOD</option>
+                                <option value="WINCHESTER" class="select-option">WINCHESTER</option>
+                                <option value="CHESTERFIELD" class="select-option">CHESTERFIELD</option>
+                                <option value="CREVECOEUR" class="select-option">CREVE COEUR</option>
+                                <option value="MARYLANDHEIGHTS" class="select-option">MARYLAND HEIGHTS</option>
+                                <option value="RICHMONDHEIGHTS" class="select-option">RICHMOND HEIGHTS</option>
+                                <option value="FRONTENAC" class="select-option">FRONTENAC</option>
+                                <option value="CRESTWOOD" class="select-option">CRESTWOOD</option>
+                                <option value="UNIVERSITYCITY" class="select-option">UNIVERSITY CITY</option>
+                            </optgroup>
                         </select>
                     </div>
                 </div>
@@ -438,7 +510,7 @@
             </div>
         </div>
     </footer>
-    <script src="/js/main.min.js?v=57a3e7f86246922601b938da0e5a8108"></script>
+    <script src="/js/main.min.js"></script>
 </body>
 </html>
 

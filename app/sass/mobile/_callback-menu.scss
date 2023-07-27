@@ -39,6 +39,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+    text-align: center;
 }
 
 .field-wrapper {
@@ -79,18 +80,24 @@
     -webkit-appearance: none;
 
     background-image: url(/images/select-arrow.svg);
-    background-position: right 11px center;
+    background-position: center right 11px;
     background-repeat: no-repeat;
     background-color: #fff;
     color: rgba(0, 0, 0, 0.5);
 
-    &::after {
-        position: absolute;
-        top: 50%;
-        right: 30px;
-        transform: translateY(-50%);
+    // &::after {
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 30px;
+    //     transform: translateY(-50%);
+    // }
+    &.intro-block3-select {
+        background-image: url(/images/zip.svg);
+        background-position: center left 6px;   
     }
 }
+
+
 
 .callback-form__radio-list {
     display: flex;
