@@ -7,6 +7,9 @@
 .intro-block--pos {
     padding-top: 0;
 
+    // @media (min-width: 1024px) {
+    //     height: calc(100vh - 86px - 44px);
+    // }
     @media (min-width: 1280px) {
         padding-bottom: 190px;
     }
@@ -93,18 +96,19 @@
 }
 
 .intro-block__btn {
-    width: 50%;
+    // width: 50%;
     margin: 0 auto;
 
     @media (min-width: 1024px) {
-        width: 61%;
-        max-width: 311px;
+        // width: 61%;
+        // max-width: 311px;
+        max-width: none;
         margin: 0;
     }
 
-    @media (min-width: 1280px) {
-        width: 49%;
-    }
+    // @media (min-width: 1280px) {
+        // width: 49%;
+    // }
     padding: 10px 50px;
     font-size: 20px;
 }
@@ -114,4 +118,20 @@
     option {
         background-image: url(/images/select-arrow.svg);
     }
+}
+
+.place-container {
+    width: 100%;
+    // max-width: 311px;
+}
+
+.place-container__radio-list {
+    label {
+        font-size: 17px;
+    }
+}
+
+.place-container__title {
+    // font-size: 20px;
+    font-size: 16px;
 }

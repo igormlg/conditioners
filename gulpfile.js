@@ -83,7 +83,7 @@ export function revHtmlCss() {
         replaceReved: true,
         dirReplacements: {
             'css': 'css',
-            '/js/': 'js/',
+            'js': 'js',
         }
     })) 
     .pipe(gulp.dest('dist')); 

@@ -148,7 +148,7 @@ for (let el of document.querySelectorAll('.slider-block')) {
 }
 // inputmask for phone
 let telInput = document.querySelectorAll('input[type="tel"]')
-let im = new Inputmask("+7 (999) 999 - 99 - 99", { showMaskOnHover: false });
+let im = new Inputmask("(999) 999 - 99 - 99", { showMaskOnHover: false });
 
 if (telInput) {
     im.mask(telInput)
@@ -206,7 +206,7 @@ if (callBtn) {
                     }
                 })
                 .then(function (response) {
-                    console.log(response.data.status);
+                    console.log(response.data);
                     if (response.data.status === 'ok') {
                         callBlockPhone.value = '';
                     }
@@ -215,6 +215,8 @@ if (callBtn) {
         }
     });
 }
+console.log('here');
+console.log('123213')
 
 // показ блоков faq
 const faqBtn = document.querySelectorAll('.faq-block__item');

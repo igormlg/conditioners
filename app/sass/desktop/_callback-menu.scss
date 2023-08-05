@@ -4,7 +4,8 @@
         height: auto;
         padding: 40px 40px 25px;
         top: calc(50% - 381px);
-        left: calc(50% - 465px);
+        // left: calc(50% - 465px);
+        left: calc(50% - 301px);
         background-color: #fff;
         box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
     }
@@ -13,16 +14,16 @@
         display: flex;
     }
 
-    .union-wrapper {
-        display: flex;
-    }
+    // .union-wrapper {
+    //     display: flex;
+    // }
 }
 
 
 
 .callback-menu__title {
     margin-bottom: 63px;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 600;
 }
 
@@ -62,7 +63,7 @@
 
 .callback-form__heading-h2 {
     font-size: 28px;
-    text-align: left;
+    text-align: center;
 }
 
 .callback-form__label {
@@ -79,6 +80,8 @@
 }
 
 #state-select {
+    width: 100%;
+    max-width: none;
     background-position: right 18px center, left 6px center;
 }
 
@@ -92,7 +95,7 @@
 
 @media (min-width: 1024px) {
     .callback-form__radio-list {
-        justify-content: flex-start;
+        justify-content: space-between;
         column-gap: 47px;
         margin-bottom: 60px;
         // margin-left: 22px;

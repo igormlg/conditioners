@@ -5,12 +5,11 @@
             <img class="intro-block__main-img" src="/images/group2x2.png" alt="group">
         </picture>
         <div class="intro-block__right-content">
-            <h1 class="intro-block__header"><div class="fp1">Clean your Air Conditioner</div> <div class="fp2">and breathe free</div></h1>
+            <h1 class="intro-block__header"><div class="fp1">Wash your Air Conditioner</div> <div class="fp2">and breathe free</div></h1>
             <p class="intro-block__desc">It's a rule you must clean it twice a year. Decrease risk of bacterias and help your device serve you 10 years.</p>
             <div class="conditioner-form">
-                <!-- <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip"> -->
-                <select class="conditioner-form__input conditioner-form__input--tex intro-block3-select" id="state-select" type="select" name="zip">
-                    <option value="Location" disabled selected hidden>Enter your zip</option>
+                <select class="conditioner-form__input conditioner-form__input--tex intro-block3-select" id="state-select" type="select" name="location">
+                    <option value="Location" disabled selected hidden>Enter your location</option>
                     <optgroup label="CITIES WE SERVICE»">
                         <option value="BALLWIN" class="select-option">BALLWIN</option>
                         <option value="BRENTWOOD" class="select-option">BRENTWOOD</option>
@@ -48,10 +47,36 @@
                         <option value="UNIVERSITYCITY" class="select-option">UNIVERSITY CITY</option>
                     </optgroup>
                 </select>
-                <input class="conditioner-form__input conditioner-form__input--text2" type="text" name="install" placeholder="Where your conditioner is installed">
+                <div class="intro-block__place-container place-container">
+                    <span class="place-container__title">Where your conditioner is installed</span>
+                    <ul class="place-container__radio-list">
+                        <li class="place-container__radio-item">
+                            <input
+                            class="visually-hidden place-container__input-radio"
+                            type="radio"
+                            name="day-part-group"
+                            id="place-wall"
+                            />
+                            <label for="place-wall">On the wall</label>
+                        </li>
+                        <li class="place-container__radio-item">
+                            <input
+                            class="visually-hidden place-container__input-radio"
+                            type="radio"
+                            name="day-part-group"
+                            id="place-floor"
+                            />
+                            <label for="place-floor">On the floor</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <input class="conditioner-form__input conditioner-form__input--text2" type="text" name="install" placeholder="Where your conditioner is installed"> -->
+                <!-- <input class="conditioner-form__input conditioner-form__input--text" type="text" name="zip" placeholder="Enter your zip"> -->
                 <!-- <textarea class="conditioner-form__input conditioner-form__input--textarea" name="" id=""  rows="2" placeholder="Where your conditioner is installed"></textarea> -->
                 <!-- <input type="submit"  id="get-it-btn" class="intro-block__btn intro-block__btn--v2" value="Get it"> -->
-                <button id="get-it-btn" class="intro-block__btn intro-block__btn--v2">Get it</button>
+                <!-- <input type="submit"  id="get-it-btn" class="intro-block__btn intro-block__btn--v2" value="Get it"> -->
+                <button id="get-it-btn" class="intro-block__btn intro-block__btn--v2">Get your quote only for 100$</button>
+                <!-- <div class="intro-block__bottom-container bottom-container"><span class="bottom-container__el">FixConditioner is the most reliable small business in St.Louis.</span><span class="bottom-container__el">Trust us!</span></div> -->
             </div>
         </div>
     </div>
