@@ -1,7 +1,6 @@
 
 // форма conditioner-form
 const getItBtn = document.querySelector('#get-it-btn');
-console.log(getItBtn)
 const dataCall = {}
 if (getItBtn) {
     getItBtn.addEventListener('click', function (event) {
@@ -209,14 +208,17 @@ if (callBtn) {
                     console.log(response.data);
                     if (response.data.status === 'ok') {
                         callBlockPhone.value = '';
+                        const confBlock = document.querySelector('.confirm-block');
+                        confBlock.classList.add('confirm-block--active');
+                    } else {
+                        const erMsg = response.data.messages_error;
+                        callBlockPhone.value = '';
                     }
                 });
             }
         }
     });
 }
-console.log('here');
-console.log('123213')
 
 // показ блоков faq
 const faqBtn = document.querySelectorAll('.faq-block__item');
@@ -272,4 +274,13 @@ modalOverlay.addEventListener('click', function(event) {
     modalOverlay.classList.remove('modal-overlay--callback-show');
     callbackMenu.classList.remove('callback-menu--show');
     bodyEl.classList.remove('body-fixed');
+});
+
+// закрытие окна уведомления
+const confirmBlock = document.querySelector('.confirm-block');
+confirmBlock.addEventListener('click', function() {
+    confirmBlock.classList.add('confirm-block--close');
+    setTimeout(function() {
+        confirmBlock.style.display = 'none'
+;    }, 500)
 });

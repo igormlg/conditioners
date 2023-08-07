@@ -1,0 +1,54 @@
+.confirm-block {
+    display: none;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 50vw;
+    padding: 20px 50px;
+    transform: translate(-50%, -50%);
+    background-color: $second-blue;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.confirm-block--active {
+    display: flex;
+}
+
+.confirm-block__text {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.confirm-block--close {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.confirm-block__btn {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        transition: color .2s, box-shadow .2s;
+
+        @media (max-width: 767px){
+            position: relative;
+            top: 2px;
+            transition: top .2s;
+        }
+    }
+
+    &:active, &:focus {
+        position: relative;
+        top: 2px;
+        transition: top .2s;
+    }
+}
