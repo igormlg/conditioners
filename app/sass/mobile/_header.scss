@@ -39,7 +39,8 @@
     // flex-shrink: 0;
     display: flex;
     align-items: center;
-    padding: 6px 12px;
+    // padding: 6px 12px;
+    padding: 12px 12px;
     background-color: $main-ochre;
     border-radius: 12px;
     cursor: pointer;
@@ -69,7 +70,8 @@
 
 .header-call__text {
     // flex-shrink: 0;
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: 16px;
     white-space: nowrap;
 }
 

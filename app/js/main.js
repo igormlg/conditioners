@@ -1,22 +1,22 @@
 
 // форма conditioner-form
-const getItBtn = document.querySelector('#get-it-btn');
-const dataCall = {}
-if (getItBtn) {
-    getItBtn.addEventListener('click', function (event) {
-        event.preventDefault();
-        const zipCode = document.querySelector('input[name=zip]')
-        const zipCodeValue = zipCode.value;
+// const getItBtn = document.querySelector('#get-it-btn');
+// const dataCall = {}
+// if (getItBtn) {
+//     getItBtn.addEventListener('click', function (event) {
+//         event.preventDefault();
+//         const zipCode = document.querySelector('input[name=zip]')
+//         const zipCodeValue = zipCode.value;
 
-        if (zipCodeValue === '') {
-            return;
-        }
+//         if (zipCodeValue === '') {
+//             return;
+//         }
         
-        dataCall.zip = zipCode.value
-        axios('/php-scripts/telegram-send.php')
-            .then(function (response) {
-            console.log(response);
-        });
+//         dataCall.zip = zipCode.value
+//         axios('/php-scripts/telegram-send.php')
+//             .then(function (response) {
+//             console.log(response);
+//         });
         // fetch('/php-scripts/telegram-send.php', {
         //     'Accept': 'application/json',
         //     'Content-Type': 'application/json'
@@ -31,8 +31,8 @@ if (getItBtn) {
         // .catch((er) => {
         //     console.log(er, 'ee')
         // })
-    })
-}
+//     })
+// }
 
 const headerBrg = document.querySelector('.header-brg');
 const headerMenu = document.querySelector('.header-title-menu');
@@ -206,12 +206,15 @@ if (callBtn) {
                 })
                 .then(function (response) {
                     console.log(response.data);
+                    const confBlock = document.querySelector('.confirm-block');
+                    const confBlockText = confBlock.querySelector('.confirm-block__text');
+                    confBlock.classList.add('confirm-block--active');
                     if (response.data.status === 'ok') {
                         callBlockPhone.value = '';
-                        const confBlock = document.querySelector('.confirm-block');
-                        confBlock.classList.add('confirm-block--active');
+                        confBlockText.textContent = 'Thanks! We\'ll call you back soon';
                     } else {
                         const erMsg = response.data.messages_error;
+                        confBlockText.textContent = erMsg;
                         callBlockPhone.value = '';
                     }
                 });

@@ -1,5 +1,9 @@
 .our-work {
     margin-bottom: 150px;
+
+    .section-desc--ow {
+        text-align: center;
+    }
 }
 .our-work__slider-wrapper {
     display: flex;
@@ -126,5 +130,8 @@
 }
 
 .section-desc--ow {
-    max-width: 460px;
+    // max-width: 460px;
+    max-width: 84%;
+    font-size: 60px;
+    text-align: center;
 }
