@@ -20,6 +20,20 @@
         height: 1px;
         background-color: $second-blue;
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 35px;
+        height: 35px;
+        background-color: #DA3C3C;
+        border-radius: 10px;
+        background-image: url(/images/cross.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 .our-work-sw2__p-first {
@@ -27,8 +41,24 @@
 }
 
 .our-work2-sb {
+    position: relative;
     box-shadow: none;
     padding: 0;
+
+    &::before {
+        z-index: 10;
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 35px;
+        height: 35px;
+        background-color: #2DC833;
+        border-radius: 10px;
+        background-image: url(/images/check-green.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 .slider-ow2 {
@@ -42,5 +72,12 @@
 
     .slider-prev--reviews, .slider-next--reviews {
         transform: translateY(0);
+    }
+}
+
+
+.our-work-sw2__item {
+    &:nth-child(2), &:nth-child(3) {
+        display: none;
     }
 }

@@ -205,10 +205,11 @@ if (callBtn) {
                     }
                 })
                 .then(function (response) {
-                    console.log(response.data);
+                    // console.log(response.data);
                     const confBlock = document.querySelector('.confirm-block');
                     const confBlockText = confBlock.querySelector('.confirm-block__text');
                     confBlock.classList.add('confirm-block--active');
+                    console.log(response.data, "ST")
                     if (response.data.status === 'ok') {
                         callBlockPhone.value = '';
                         confBlockText.textContent = 'Thanks! We\'ll call you back soon';
@@ -217,6 +218,9 @@ if (callBtn) {
                         confBlockText.textContent = erMsg;
                         callBlockPhone.value = '';
                     }
+                })
+                .catch(function(er) {
+                    console.log(er)
                 });
             }
         }

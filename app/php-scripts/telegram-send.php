@@ -9,19 +9,32 @@ $data = json_decode($json, true);
 $bot_url    = "https://api.telegram.org/bot$bot_token/";
 
 $nonsequential = json_encode($data);
-$response = [];
+// $response = [];
+
+// функция подключения к внешнему ресурсу
+function connectResourse($url) {
+    $curlSession = curl_init();
+    curl_setopt($curlSession, CURLOPT_URL, $url);
+    curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
+    curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
+
+    $answer = json_decode(curl_exec($curlSession));
+    curl_close($curlSession);
+
+    return $answer;
+}
 
 if (isset($data['form'])) {
     if ( $data['form'] === "call-block-form") {
         $telegram_text = "Phone: " . $data['phone'] . "\n\nCallback has been ordered";
     }
 
-    file_put_contents('file3.txt', print_r($telegram_text, 1). "\n", FILE_APPEND);
     $url = $bot_url."sendMessage?chat_id=".$channel_id."&text=".urlencode($telegram_text);
-    $answer = file_get_contents($url);
-    $answer = json_decode($answer);
-    // file_put_contents('file3.txt', print_r(($answer->{'result'}), 1). "\n", FILE_APPEND);
-    if ($answer->{'ok'}) {
+    $answer = connectResourse($url);
+
+    file_put_contents('file3.txt', print_r(($answer), 1). "\n", FILE_APPEND);
+
+    if (isset($answer->{'ok'})) {
         $response = [
             'status' => 'ok',
             'messages_error' => ''
@@ -39,6 +52,6 @@ if (isset($data['form'])) {
     ];
 }
     
-echo json_encode($response); 
+echo json_encode($response, JSON_ERROR_NONE); 
 
 ?>

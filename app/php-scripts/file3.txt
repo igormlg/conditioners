@@ -1,20 +1,273 @@
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
 
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
 
-Phone: +7(123)123-12-31
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [messages_error] => Something went wrong
+    [status] => 
+)
+
+Array
+(
+    [status] => ok
+    [messages_error] => 
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 17
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1691608104
+            [text] => Phone: (123)123-12-31
 
 Callback has been ordered
-Phone: +7(123)123-12-31
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+
+stdClass Object
+(
+    [ok] => 
+    [error_code] => 401
+    [description] => Unauthorized
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 18
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1691608603
+            [text] => Phone: (123)213-21-31
 
 Callback has been ordered
-Phone: +7(123)123-12-32
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 19
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1691609107
+            [text] => Phone: (123)213-21-31
 
 Callback has been ordered
-Phone: +7(123)123-12-32
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 20
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1691609326
+            [text] => Phone: (123)213-21-32
 
 Callback has been ordered
-Phone: (123)123-12-31
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
 
-Callback has been ordered
-Phone: (123)123-12-31
+                )
 
-Callback has been ordered
+        )
+
+)
+
