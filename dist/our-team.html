@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style-97ebf6e423.min.css">
+    <link rel="stylesheet" href="/css/style-073d13bf55.min.css">
 </head>
 <body>
     
@@ -236,14 +236,15 @@
 
 <div class="callback-menu">
     <div class="callback-menu__inner-container">
-        <div class="desktop-close-menu desktop-close-menu--show"></div>
+        <div class="desktop-close-menu"></div>
         <h2 class="callback-menu__title">THIS IS THE BEST QUOTE EVER.<br/>JUST FOR 99$ CLEAN YOUR CONDITIONER!</h2>
         <form class="callback-form" action="" name="callback-form">
             <!-- <h3 class="callback-form__heading-h2">My name is</h3> -->
             <div class="name-fields-wrapper">
-                <div class="field-wrapper">
+                <div class="field-wrapper field-name-wrapper">
                     <label class="callback-form__label" for="first-name">Your name</label>
                     <input class="callback-form__text-input" id="first-name" type="text" placeholder="Adrian">
+                    <span class="name-err">Name is required</span>
                 </div>
                 <!-- <div class="field-wrapper">
                     <label class="callback-form__label" for="last-name">Last name</label>
@@ -255,8 +256,8 @@
                 <div class="state-fields-wrapper">
                     <!-- <h3 class="callback-form__heading-h2">I live in</h3> -->
                     <div class="field-wrapper">
-                        <label class="callback-form__label" for="state-select">I live in</label>
-                        <select class="callback-form__text-input" id="state-select" type="select">
+                        <label class="callback-form__label" for="state-select2">I live in</label>
+                        <select class="callback-form__text-input" id="state-select2" type="select">
                             <option value="Location" disabled selected hidden>Location</option>
                             <optgroup label="CITIES WE SERVICE»">
                                 <option value="BALLWIN" class="select-option">BALLWIN</option>
@@ -295,6 +296,7 @@
                                 <option value="UNIVERSITYCITY" class="select-option">UNIVERSITY CITY</option>
                             </optgroup>
                         </select>
+                        <span class="state-err">Location is required</span>
                     </div>
                 </div>
     
@@ -303,6 +305,7 @@
                     <div class="field-wrapper field-wrapper--phone">
                         <label class="callback-form__label" for="callback-tel">Phone</label>
                         <input class="callback-form__text-input callback-tel" id="callback-tel" type="tel" placeholder="Number">
+                        <span class="phone-err">Phone is required</span>
                     </div>
                 </div>
             </div>
@@ -315,6 +318,7 @@
                         type="radio"
                         name="day-part-group"
                         id="filter-morning"
+                        value="Morning"
                     />
                   <label for="filter-morning">Morning</label>
                 </li>
@@ -324,6 +328,7 @@
                         type="radio"
                         name="day-part-group"
                         id="filter-day"
+                        value="Day"
                     />
                   <label for="filter-day">Day</label>
                 </li>
@@ -333,10 +338,13 @@
                         type="radio"
                         name="day-part-group"
                         id="filter-evening"
+                        value="Evening"
                     />
                   <label for="filter-evening">Evening</label>
                 </li>
+                <li class="time-err">Day part is required</li>
             </ul>
+            <!-- <span class="time-err">Day part is required</span> -->
 
             <input class="callback-form__submit" type="submit" value="Send">
 
@@ -383,6 +391,6 @@
             </div>
         </div>
     </footer>
-    <script src="/js/main-aab0ab8401.min.js"></script>
+    <script src="/js/main-bc85820b1f.min.js"></script>
 </body>
 </html>

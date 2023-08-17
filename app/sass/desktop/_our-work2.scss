@@ -35,7 +35,7 @@
     position: relative;
 
     &::before {
-        z-index: 10;
+        z-index: unset;
         content: '';
         position: absolute;
         left: 20px;

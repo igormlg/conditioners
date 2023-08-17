@@ -11,6 +11,11 @@
     position: relative;
     margin-bottom: 40px;
 
+    img {
+        display: block;
+        width: 100%;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -46,7 +51,7 @@
     padding: 0;
 
     &::before {
-        z-index: 10;
+        z-index: 4;
         content: '';
         position: absolute;
         left: 20px;

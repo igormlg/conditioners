@@ -1315,3 +1315,682 @@ New order for install
 
 )
 
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 54
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302400
+            [text] => Phone: +1231231231
+Name: qwe
+Location: DESPERES
+When: Morning
+
+New order for install
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 55
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302428
+            [text] => Phone: +1232131231
+Name: 123213123123
+Location: DESPERES
+When: Morning
+
+New order for install
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 56
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302506
+            [text] => Phone: (979)789-78-97
+Name: cccc
+Location: DESPERES
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 57
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302622
+            [text] => Phone: (123)213-21-32
+Name: zxc
+Location: MEHLVILLE
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 58
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302673
+            [text] => Phone: (123)123-12-31
+Name: ert
+Location: DESPERES
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 59
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302739
+            [text] => Phone: (123)213-12-31
+Name: 123
+Location: WEBSTERGROVES
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 60
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302799
+            [text] => Phone: (123)123-12-31
+Name: 123
+Location: DESPERES
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 61
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302867
+            [text] => Phone: (123)123-12-31
+
+Callback has been ordered
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 62
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302928
+            [text] => Phone: (123)123-21-31
+Name: 123213
+Location: DESPERES
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 63
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692302942
+            [text] => Phone: (123)123-12-31
+Name: qweqweqw
+Location: MEHLVILLE
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 64
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303035
+            [text] => Phone: (123)123-21-31
+Name: 123
+Location: WEBSTERGROVES
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 69
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303401
+            [text] => Phone: (123)123-21-31
+Name: qwe
+Location: MEHLVILLE
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 70
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303454
+            [text] => Phone: (123)123-12-31
+Name: qwe
+Location: DESPERES
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 71
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303592
+            [text] => Phone: (123)213-12-31
+Name: 123123
+Location: WEBSTERGROVES
+When: Day
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 72
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303684
+            [text] => Phone: (123)123-12-31
+Name: 123213
+Location: MEHLVILLE
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+
+stdClass Object
+(
+    [ok] => 1
+    [result] => stdClass Object
+        (
+            [message_id] => 73
+            [sender_chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [chat] => stdClass Object
+                (
+                    [id] => -1001774735836
+                    [title] => Conditioners test
+                    [username] => conditioners_test_channel
+                    [type] => channel
+                )
+
+            [date] => 1692303699
+            [text] => Phone: (123)213-12-31
+Name: 123213
+Location: DESPERES
+When: Morning
+
+New order for install
+            [entities] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [offset] => 7
+                            [length] => 14
+                            [type] => phone_number
+                        )
+
+                )
+
+        )
+
+)
+

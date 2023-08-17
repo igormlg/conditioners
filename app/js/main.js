@@ -50,7 +50,8 @@ headerBrg.addEventListener('click', function() {
         headerBrg.classList.remove('header-brg--active');
         modalOverlay.classList.remove('modal-overlay--callback-show');
         headerCall.classList.remove('header-call--overlayed');
-        bodyEl.classList.remove('body-fixed')
+        bodyEl.classList.remove('body-fixed');
+        removeErrs();
 
         if (headerMenu.classList.contains('header-title-menu--active')) {
             headerMenu.classList.remove('header-title-menu--active');
@@ -333,6 +334,7 @@ if (callbackFormSubmit) {
 
         if (callbackTel.inputmask) {
             let unmaskedcallbackTel = callbackTel.inputmask.unmaskedvalue();
+            console.log(callbackTel.value, 'callbackTel±!!!!')
             if (unmaskedcallbackTel.length !== 10) {
 
                 callbackTel.addEventListener('input', inputcallbackTelListener);
@@ -363,12 +365,14 @@ if (callbackFormSubmit) {
             console.log('FULL')
             const data = {
                 form: 'callback-form',
-                phone: '+' + phoneCheck,
+                phone: (callbackTel.value).split(' ').join(''),
                 name: nameCheck,
                 location: locationCheck,
                 when: dayPartChecked.value
             }
             console.log(data)
+            const confBlock = document.querySelector('.confirm-block');
+            const confBlockText = confBlock.querySelector('.confirm-block__text');
 
             axios({
                 method: 'post',
@@ -378,25 +382,30 @@ if (callbackFormSubmit) {
             .then(function (response) {
                 console.log(response.data)
                 if (response.data.status === 'ok') {
-
+                    confBlockText.textContent = 'Thanks! We\'ll call you back soon';
                 } else {
-                    
+                    const erMsg = response.data.messages_error;
+                    confBlockText.textContent = erMsg;
                 }
             })
             .catch(function(er) {
                 console.log(er)
+                confBlockText.textContent = 'Something went wrong!';
             })
             .finally(function() {
+                confBlock.classList.add('confirm-block--active');
                 dayPartChecked.checked = false;
                 callbackTel.value = '';
                 firstName.value = '';
                 stateSelect.value = 'Location';
                 callbackMenu.classList.remove('callback-menu--show');
                 modalOverlay.classList.remove('modal-overlay--callback-show');
+                modalOverlay.classList.remove('modal-overlay--show');
                 bodyEl.classList.remove('body-fixed');
                 headerBrg.classList.remove('header-brg--active');
                 deskCloseMenu.classList.remove('desktop-close-menu--show');
                 headerCall.classList.remove('header-call--overlayed');
+                headerMenu.classList.remove('header-title-menu--active')
             })
         }
     });
@@ -464,7 +473,6 @@ modalOverlay.addEventListener('click', function(event) {
 
     // закрытие ошибок
     removeErrs();
-
 });
 
 // закрытие окна уведомления

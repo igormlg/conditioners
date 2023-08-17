@@ -1,0 +1,2 @@
+define('CHANNEL_ID', '');
+define('TELEGRAM_TOKEN', '');
