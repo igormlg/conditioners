@@ -1,3 +1,4 @@
 node_modules
-src/php-scripts/vendor
+app/php-scripts/config.php
+dist/php-scripts/config.php
 package-lock.json

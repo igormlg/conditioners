@@ -1,5 +1,6 @@
 @media (min-width: 1024px) {
     .callback-menu--show {
+        z-index: 100;
         width: auto;
         height: auto;
         padding: 40px 40px 25px;
@@ -29,37 +30,42 @@
     font-weight: 600;
 }
 
-.callback-menu__inner-container {
-    position: relative;
+@media (min-width: 1024px) {
+    .callback-menu__inner-container {
+        position: relative;
+    }
 }
 
-@media (min-width: 1024px) {
-    .desktop-close-menu--show {
-        display: block;
+.desktop-close-menu--show {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 36px;
+    right: 36px;
+    cursor: pointer;
+
+    &::after, &::before{
+        content: '';
         position: absolute;
-        width: 34px;
-        height: 34px;
-        top: 0;
+        top: 16px;
         right: 0;
-        cursor: pointer;
-    
-        &::after, &::before{
-            content: '';
-            position: absolute;
-            top: 16px;
-            right: 0;
-            width: 34px;
-            height: 2px;
-            background-color: $second-blue;
-        }
-    
-        &::before {
-            transform: rotate(45deg);
-        }
-    
-        &::after {
-            transform: rotate(-45deg);
-        }
+        width: 34px;
+        height: 2px;
+        background-color: $second-blue;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    @media (min-width: 1024px) {
+        top: -18px;
+        right: -18px;
     }
 }
 
@@ -81,7 +87,7 @@
     column-gap: 50px;
 }
 
-#state-select {
+#state-select, #state-select2 {
     width: 100%;
     max-width: none;
     background-position: right 18px center, left 6px center;
@@ -127,4 +133,8 @@
 
 .callback-form__submit {
     font-size: 28px;
+}
+
+.callback-form {
+    max-width: 400px;
 }

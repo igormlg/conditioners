@@ -277,7 +277,8 @@
 
 .place-container__input-radio:checked+label {
     border: 1px solid darken($second-blue, 40%);
-    font-weight: 500;
+    // font-weight: 500;
+    color: #000;
 
     &::before {
         border: 1px solid darken($second-blue, 40%);

@@ -75,7 +75,11 @@
     }
 }
 
-#state-select {
+.callback-form__text-input-err {
+    border: 1px solid red;
+}
+
+#state-select, #state-select2 {
     position: relative;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -104,6 +108,7 @@
     // position: relative;
     // left: 11px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
     margin-bottom: 30px;
@@ -187,3 +192,21 @@
 .desktop-close-menu {
     display: none;
 }
+
+.name-err, .state-err, .phone-err, .time-err {
+    display: none;
+    margin-top: 5px;
+    color: red;
+}
+
+.name-err--show, .state-err--show, .phone-err--show, .time-err--show {
+    display: block;
+}
+
+.time-err {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+

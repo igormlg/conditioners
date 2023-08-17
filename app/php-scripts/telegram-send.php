@@ -1,12 +1,11 @@
 <?php
+require 'config.php';
 // $channel_id = '-1001821980475'; // igor_test_chanel
-$channel_id = '-1001774735836'; // conditioners_channel
-$bot_token = '2011467293:AAFuNRDmK__OoqDdJcPX0PHWSCthQOdGtmo'; #test_igormlg_bot3
 
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
 
-$bot_url    = "https://api.telegram.org/bot$bot_token/";
+$bot_url    = "https://api.telegram.org/bot" . BOT_TOKEN ."/";
 
 $nonsequential = json_encode($data);
 // $response = [];
@@ -25,11 +24,14 @@ function connectResourse($url) {
 }
 
 if (isset($data['form'])) {
-    if ( $data['form'] === "call-block-form") {
+    if ($data['form'] === "call-block-form") {
         $telegram_text = "Phone: " . $data['phone'] . "\n\nCallback has been ordered";
     }
+    if ($data['form'] === "callback-form") {
+        $telegram_text = "Phone: " . $data['phone'] . "\nName: " . $data['name'] . "\nLocation: " . $data['location'] . "\nWhen: " . $data['when'] . "\n\nNew order for install";
+    }
 
-    $url = $bot_url."sendMessage?chat_id=".$channel_id."&text=".urlencode($telegram_text);
+    $url = $bot_url."sendMessage?chat_id=".CHANNEL_ID."&text=".urlencode($telegram_text);
     $answer = connectResourse($url);
 
     file_put_contents('file3.txt', print_r(($answer), 1). "\n", FILE_APPEND);
