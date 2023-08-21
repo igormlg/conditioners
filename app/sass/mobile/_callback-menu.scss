@@ -76,7 +76,7 @@
 }
 
 .callback-form__text-input-err {
-    border: 1px solid red;
+    border: 1px solid red!important;
 }
 
 #state-select, #state-select2 {
@@ -102,7 +102,9 @@
     }
 }
 
-
+.innner-menu-location--hide {
+    display: none;
+}
 
 .callback-form__radio-list {
     // position: relative;
@@ -193,14 +195,17 @@
     display: none;
 }
 
-.name-err, .state-err, .phone-err, .time-err {
+.name-err, .state-err, .phone-err, .time-err, .intro-location-err, .install-place-err {
     display: none;
     margin-top: 5px;
     color: red;
 }
 
-.name-err--show, .state-err--show, .phone-err--show, .time-err--show {
+.name-err--show, .state-err--show, .phone-err--show, .time-err--show, .intro-location-err--show, .install-place-err--show {
     display: block;
+}
+.intro-location-err--show, .install-place-err--show {
+    margin-top: -5px;
 }
 
 .time-err {

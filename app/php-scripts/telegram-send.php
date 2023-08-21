@@ -36,7 +36,7 @@ if (isset($data['form'])) {
 
     file_put_contents('file3.txt', print_r(($answer), 1). "\n", FILE_APPEND);
 
-    if (isset($answer->{'ok'})) {
+    if (isset($answer->{'ok'}) && $answer->{'ok'} == true) {
         $response = [
             'status' => 'ok',
             'messages_error' => ''

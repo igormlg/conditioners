@@ -1,39 +1,3 @@
-
-// форма conditioner-form
-// const getItBtn = document.querySelector('#get-it-btn');
-// const dataCall = {}
-// if (getItBtn) {
-//     getItBtn.addEventListener('click', function (event) {
-//         event.preventDefault();
-//         const zipCode = document.querySelector('input[name=zip]')
-//         const zipCodeValue = zipCode.value;
-
-//         if (zipCodeValue === '') {
-//             return;
-//         }
-        
-//         dataCall.zip = zipCode.value
-//         axios('/php-scripts/telegram-send.php')
-//             .then(function (response) {
-//             console.log(response);
-//         });
-        // fetch('/php-scripts/telegram-send.php', {
-        //     'Accept': 'application/json',
-        //     'Content-Type': 'application/json'
-        // })
-        // .then((response) => {
-        //     // console.log(response, 'resp')
-        //     return response.json();
-        // })
-        // .then((data) => {
-        //     console.log(data)
-        // })
-        // .catch((er) => {
-        //     console.log(er, 'ee')
-        // })
-//     })
-// }
-
 const headerBrg = document.querySelector('.header-brg');
 const headerMenu = document.querySelector('.header-title-menu');
 const modalOverlay = document.querySelector('.modal-overlay');
@@ -42,6 +6,14 @@ const callbackMenu = document.querySelector('.callback-menu');
 const cbBtn = document.querySelectorAll('.cb-btn');
 const bodyEl = document.body;
 const deskCloseMenu = document.querySelector('.desktop-close-menu');
+
+const getOtBtn = document.querySelector('#get-it-btn');
+const introBlockSelect = document.querySelector('.intro-block3-select');
+let installPlaceChecked = null;
+const installPlaceGroup = document.querySelectorAll('input[name="place-group"]');
+const introLocationErr = document.querySelector('.intro-location-err');
+const installPlaceErr = document.querySelector('.install-place-err');
+let checkFormConnect = false;
 
 // события по нажатию на бургер
 headerBrg.addEventListener('click', function() {
@@ -236,7 +208,6 @@ if (callBtn) {
                     }
                 })
                 .catch(function(er) {
-                    console.log(er)
                     confBlockText.textContent = 'Something went wrong!';
                 })
                 .finally(function() {
@@ -334,7 +305,6 @@ if (callbackFormSubmit) {
 
         if (callbackTel.inputmask) {
             let unmaskedcallbackTel = callbackTel.inputmask.unmaskedvalue();
-            console.log(callbackTel.value, 'callbackTel±!!!!')
             if (unmaskedcallbackTel.length !== 10) {
 
                 callbackTel.addEventListener('input', inputcallbackTelListener);
@@ -357,12 +327,9 @@ if (callbackFormSubmit) {
                 dayPartGroup[r].addEventListener('click', timeRadioListener);
             }
         }
-        console.log(dayPartChecked, 'dayPartChecked')
-        console.log(phoneCheck ,'phoneCheck')
-        console.log(nameCheck, 'nameCheck')
-        console.log(locationCheck, 'locationCheck')
-        if (dayPartChecked && phoneCheck && nameCheck && locationCheck) {
-            console.log('FULL')
+
+        if ((dayPartChecked && phoneCheck && nameCheck && locationCheck) || (dayPartChecked && phoneCheck && nameCheck && checkFormConnect)) {
+
             const data = {
                 form: 'callback-form',
                 phone: (callbackTel.value).split(' ').join(''),
@@ -370,7 +337,11 @@ if (callbackFormSubmit) {
                 location: locationCheck,
                 when: dayPartChecked.value
             }
-            console.log(data)
+
+            if (checkFormConnect) {
+                data.installPlace = installPlaceChecked.value;
+                data.location = introBlockSelect.value;
+            } 
             const confBlock = document.querySelector('.confirm-block');
             const confBlockText = confBlock.querySelector('.confirm-block__text');
 
@@ -380,7 +351,6 @@ if (callbackFormSubmit) {
                 data: data
             })
             .then(function (response) {
-                console.log(response.data)
                 if (response.data.status === 'ok') {
                     confBlockText.textContent = 'Thanks! We\'ll call you back soon';
                 } else {
@@ -389,7 +359,6 @@ if (callbackFormSubmit) {
                 }
             })
             .catch(function(er) {
-                console.log(er)
                 confBlockText.textContent = 'Something went wrong!';
             })
             .finally(function() {
@@ -405,7 +374,14 @@ if (callbackFormSubmit) {
                 headerBrg.classList.remove('header-brg--active');
                 deskCloseMenu.classList.remove('desktop-close-menu--show');
                 headerCall.classList.remove('header-call--overlayed');
-                headerMenu.classList.remove('header-title-menu--active')
+                headerMenu.classList.remove('header-title-menu--active');
+
+                for (let r = 0; r < dayPartGroup.length; r++) {
+                    dayPartGroup[r].removeEventListener('click', timeRadioListener);
+                }
+                firstName.removeEventListener('input', inputNameListener);
+                stateSelect.removeEventListener('change', changeStateSelect);
+                callbackTel.removeEventListener('input', inputcallbackTelListener);
             })
         }
     });
@@ -499,3 +475,48 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+// событие по нажатию на #get-it-btn
+
+function changeIntroBlockSelect() {
+    introBlockSelect.classList.remove('callback-form__text-input-err');
+    introLocationErr.classList.remove('intro-location-err--show');
+}
+
+function installPlaceListener() {
+    installPlaceErr.classList.remove('install-place-err--show');
+    // installPlaceChecked = 
+}
+
+if (getOtBtn) {
+    getOtBtn.addEventListener('click', function() {
+        console.log(introBlockSelect.value)
+        
+        installPlaceChecked = document.querySelector('input[name="place-group"]:checked');
+        if (introBlockSelect.value === 'Location') {
+            introBlockSelect.classList.add('callback-form__text-input-err');
+            introLocationErr.classList.add('intro-location-err--show');
+            
+            introBlockSelect.addEventListener('change', changeIntroBlockSelect);
+        }
+        if (!installPlaceChecked) {
+            installPlaceErr.classList.add('install-place-err--show');
+            
+            for (let i = 0; i < installPlaceGroup.length; i++) {
+                installPlaceGroup[i].addEventListener('click', installPlaceListener);
+            }
+        }
+        if (installPlaceChecked && introBlockSelect.value !== 'Location' ) {
+            checkFormConnect = true;
+            console.log(installPlaceChecked.value, 'installPlaceChecked')
+            callbackMenu.classList.add('callback-menu--show');
+            headerBrg.classList.add('header-brg--active');
+            modalOverlay.classList.add('modal-overlay--callback-show');
+            headerCall.classList.add('header-call--overlayed');
+            bodyEl.classList.add('body-fixed');
+
+            const innerMenuLocation = document.querySelector('.innner-menu-location');
+            innerMenuLocation.classList.add('innner-menu-location--hide');
+        }
+    });
+}

@@ -17,14 +17,6 @@
     transition: all .5s;
     font-size: 0;
     line-height: 0;
-
-    picture {
-        // flex-shrink: 0;
-        // width: 100%;
-    }
-    // img {
-    //     flex-shrink: 0;
-    // }
 }
 
 .slider-btn {
@@ -53,7 +45,7 @@
         content: '';
         position: absolute;
         top: 48%;
-        left: 10px;
+        left: 11px;
         width: 10px;
         height: 2px;
         background-color: #000;
@@ -65,7 +57,7 @@
         content: '';
         position: absolute;
         top: 52%;
-        left: 10px;
+        left: 11px;
         width: 10px;
         height: 2px;
         background-color: #000;
@@ -82,7 +74,7 @@
         content: '';
         position: absolute;
         top: 52%;
-        left: 10px;
+        right: 11px;
         width: 10px;
         height: 2px;
         background-color: #000;
@@ -94,7 +86,7 @@
         content: '';
         position: absolute;
         top: 48%;
-        left: 10px;
+        right: 11px;
         width: 10px;
         height: 2px;
         background-color: #000;
