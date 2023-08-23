@@ -24,11 +24,15 @@ function connectResourse($url) {
 }
 
 if (isset($data['form'])) {
+    $telegram_text = '';
     if ($data['form'] === "call-block-form") {
         $telegram_text = "Phone: " . $data['phone'] . "\n\nCallback has been ordered";
     }
     if ($data['form'] === "callback-form") {
         $telegram_text = "Phone: " . $data['phone'] . "\nName: " . $data['name'] . "\nLocation: " . $data['location'] . "\nWhen: " . $data['when'] . "\n\nNew order for install";
+    }
+    if (isset($data['installPlace'])) {
+        $telegram_text = $telegram_text = "Phone: " . $data['phone'] . "\nName: " . $data['name'] . "\nLocation: " . $data['location'] . "\nWhen: " . $data['when'] . "\nInstall place: " . $data['installPlace'] . "\n\nNew order for install";
     }
 
     $url = $bot_url."sendMessage?chat_id=".CHANNEL_ID."&text=".urlencode($telegram_text);

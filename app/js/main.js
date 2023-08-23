@@ -9,11 +9,14 @@ const deskCloseMenu = document.querySelector('.desktop-close-menu');
 
 const getOtBtn = document.querySelector('#get-it-btn');
 const introBlockSelect = document.querySelector('.intro-block3-select');
-let installPlaceChecked = null;
 const installPlaceGroup = document.querySelectorAll('input[name="place-group"]');
+let installPlaceChecked = document.querySelector('input[name="place-group"]:checked');
+const innerMenuLocation = document.querySelector('.innner-menu-location');
 const introLocationErr = document.querySelector('.intro-location-err');
 const installPlaceErr = document.querySelector('.install-place-err');
 let checkFormConnect = false;
+
+const confirmBlock = document.querySelector('.confirm-block');
 
 // события по нажатию на бургер
 headerBrg.addEventListener('click', function() {
@@ -189,8 +192,8 @@ if (callBtn) {
             } else {
                 callBlockPhone.removeEventListener('input', inputListener);
                 const transformNumber = (callBlockPhone.value).split(' ').join('')
-                const confBlock = document.querySelector('.confirm-block');
-                const confBlockText = confBlock.querySelector('.confirm-block__text');
+                // const confBlock = document.querySelector('.confirm-block');
+                const confBlockText = confirmBlock.querySelector('.confirm-block__text');
                 axios({
                     method: 'post',
                     url: '/php-scripts/telegram-send.php',
@@ -211,8 +214,15 @@ if (callBtn) {
                     confBlockText.textContent = 'Something went wrong!';
                 })
                 .finally(function() {
-                    confBlock.classList.add('confirm-block--active');
+                    confirmBlock.classList.add('confirm-block--active');
                     callBlockPhone.value = '';
+                    setTimeout(function() {
+                        confirmBlock.classList.add('confirm-block--close');
+                    }, 6000);
+                    setTimeout(function() {
+                        confirmBlock.classList.remove('confirm-block--active');
+                        confirmBlock.classList.remove('confirm-block--close');
+                    }, 8000);
                 });
             }
         }
@@ -220,7 +230,6 @@ if (callBtn) {
 }
 
 // обработка событий на кнопке callback-form__submit
-
 const callbackFormSubmit = document.querySelector('.callback-form__submit');
 
 let reqSubmit = false;
@@ -294,7 +303,7 @@ if (callbackFormSubmit) {
             nameCheck = firstName.value;
         }
         
-        if (stateSelect.value === 'Location') {
+        if (stateSelect.value === 'Location' && !installPlaceChecked) {
             stateSelect.classList.add('callback-form__text-input-err');
             stateErr.classList.add('state-err--show');
             stateSelect.addEventListener('change', changeStateSelect);
@@ -342,8 +351,8 @@ if (callbackFormSubmit) {
                 data.installPlace = installPlaceChecked.value;
                 data.location = introBlockSelect.value;
             } 
-            const confBlock = document.querySelector('.confirm-block');
-            const confBlockText = confBlock.querySelector('.confirm-block__text');
+            // const confBlock = document.querySelector('.confirm-block');
+            const confBlockText = confirmBlock.querySelector('.confirm-block__text');
 
             axios({
                 method: 'post',
@@ -362,7 +371,7 @@ if (callbackFormSubmit) {
                 confBlockText.textContent = 'Something went wrong!';
             })
             .finally(function() {
-                confBlock.classList.add('confirm-block--active');
+                confirmBlock.classList.add('confirm-block--active');
                 dayPartChecked.checked = false;
                 callbackTel.value = '';
                 firstName.value = '';
@@ -375,6 +384,11 @@ if (callbackFormSubmit) {
                 deskCloseMenu.classList.remove('desktop-close-menu--show');
                 headerCall.classList.remove('header-call--overlayed');
                 headerMenu.classList.remove('header-title-menu--active');
+                innerMenuLocation.classList.remove('innner-menu-location--hide');
+                
+                installPlaceChecked.checked = false;
+                introBlockSelect.value = 'Location';
+                checkFormConnect = false;
 
                 for (let r = 0; r < dayPartGroup.length; r++) {
                     dayPartGroup[r].removeEventListener('click', timeRadioListener);
@@ -382,6 +396,13 @@ if (callbackFormSubmit) {
                 firstName.removeEventListener('input', inputNameListener);
                 stateSelect.removeEventListener('change', changeStateSelect);
                 callbackTel.removeEventListener('input', inputcallbackTelListener);
+                setTimeout(function() {
+                    confirmBlock.classList.add('confirm-block--close');
+                }, 6000);
+                setTimeout(function() {
+                    confirmBlock.classList.remove('confirm-block--active');
+                    confirmBlock.classList.remove('confirm-block--close');
+                }, 8000);
             })
         }
     });
@@ -420,7 +441,7 @@ if (whyScrollAll.length) {
                 setTimeout(function() {
                     const rect = cleaningBlock.getBoundingClientRect();
                     window.scroll({ top: rect.y, left: 0, behavior: 'smooth' });
-                }, 100)
+                }, 100);
             }
         });
     }
@@ -452,13 +473,12 @@ modalOverlay.addEventListener('click', function(event) {
 });
 
 // закрытие окна уведомления
-const confirmBlock = document.querySelector('.confirm-block');
 confirmBlock.addEventListener('click', function() {
     confirmBlock.classList.add('confirm-block--close');
     setTimeout(function() {
         confirmBlock.classList.remove('confirm-block--active');
         confirmBlock.classList.remove('confirm-block--close');
-;    }, 500)
+    }, 500);
 });
 
 // закрытие всех предупреждений по нажатию на body
@@ -477,7 +497,6 @@ document.addEventListener('click', function(event) {
 });
 
 // событие по нажатию на #get-it-btn
-
 function changeIntroBlockSelect() {
     introBlockSelect.classList.remove('callback-form__text-input-err');
     introLocationErr.classList.remove('intro-location-err--show');
@@ -485,14 +504,12 @@ function changeIntroBlockSelect() {
 
 function installPlaceListener() {
     installPlaceErr.classList.remove('install-place-err--show');
-    // installPlaceChecked = 
 }
 
 if (getOtBtn) {
-    getOtBtn.addEventListener('click', function() {
-        console.log(introBlockSelect.value)
-        
+    getOtBtn.addEventListener('click', function() {        
         installPlaceChecked = document.querySelector('input[name="place-group"]:checked');
+
         if (introBlockSelect.value === 'Location') {
             introBlockSelect.classList.add('callback-form__text-input-err');
             introLocationErr.classList.add('intro-location-err--show');
@@ -508,14 +525,13 @@ if (getOtBtn) {
         }
         if (installPlaceChecked && introBlockSelect.value !== 'Location' ) {
             checkFormConnect = true;
-            console.log(installPlaceChecked.value, 'installPlaceChecked')
             callbackMenu.classList.add('callback-menu--show');
             headerBrg.classList.add('header-brg--active');
             modalOverlay.classList.add('modal-overlay--callback-show');
             headerCall.classList.add('header-call--overlayed');
             bodyEl.classList.add('body-fixed');
+            deskCloseMenu.classList.add('desktop-close-menu--show')
 
-            const innerMenuLocation = document.querySelector('.innner-menu-location');
             innerMenuLocation.classList.add('innner-menu-location--hide');
         }
     });
